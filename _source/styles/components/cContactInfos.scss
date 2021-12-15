@@ -1,0 +1,19 @@
+.c-contactInfos {
+    li {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        i {
+            @include flexWidth(30px);
+        }
+        p {
+            @include paragrafos();
+            padding-left: 10px;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

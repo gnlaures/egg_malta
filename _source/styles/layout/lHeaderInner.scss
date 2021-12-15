@@ -1,0 +1,43 @@
+.l-headerInner {
+    @include bg(assets, 'bg_dark.jpg', no-repeat, cover, inherit, bottom);
+    display: block;
+    position: relative;
+    z-index: 2;
+    height: 500px;
+    &__bg,
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__bg {
+        @include pb(100%);
+        @include opacity(0.15);
+        background-position: center !important;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+    }
+    &__content {
+        padding-top: 148px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .u-container {
+        max-width: 600px;
+    }
+    h1 {
+        @include default__title($fs: 72px);
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    p {
+        @include paragrafos($tc: $white, $fs: 22px);
+        text-align: center;
+    }
+}

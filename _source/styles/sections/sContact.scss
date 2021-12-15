@@ -1,0 +1,21 @@
+.s-contact {
+    .u-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__form {
+        flex: 1 1 auto;
+        padding-right: 80px;
+        .c-contactForm {
+            margin-top: 30px;
+        }
+    }
+    &__infos {
+        @include flexWidth(370px);
+        > * {
+            margin-bottom: 40px;
+        }
+    }
+}

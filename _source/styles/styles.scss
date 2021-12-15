@@ -30,6 +30,8 @@
 @import "components/cMainCtas.scss";
 @import "components/cfeaturedPicture.scss";
 @import "components/cLinkReadMore.scss";
+@import "components/cContactInfos.scss";
+@import "components/cContactMap.scss";
 
 // sections
 @import "sections/s404.scss";
@@ -40,11 +42,13 @@
 @import "sections/sAbout.scss";
 @import "sections/sClients.scss";
 @import "sections/sRequireContact.scss";
+@import "sections/sContact.scss";
 
 // layouts
 @import "layout/lPage";
 @import "layout/lNav";
 @import "layout/lHeaderHome";
+@import "layout/lHeaderInner";
 @import "layout/lFooter";
 
 // boilerplate page

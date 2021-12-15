@@ -73,6 +73,11 @@
         //top: -300px;
     }
 }
+body.p-inner {
+    .l-nav {
+        background: $secondary;
+    }
+}
 .l-navMobile {
     @include u-hideElement;
     @include transition();
@@ -97,12 +102,12 @@
     }
     &__content {
         @include transition($delay: 50ms, $duration: 280ms);
-        @include scroll($bg: $white3, $bar: $gray2);
+        @include scroll($bg: $secondaryLight, $bar: $primary);
         display: block;
         width: 100%;
         max-width: 320px;
         height: 100vh;
-        background: $white;
+        background: $secondary;
         position: fixed;
         top: 0;
         z-index: 2;
@@ -123,6 +128,15 @@
         margin-bottom: 30px;
     }
 
+    .c-smartMenu {
+        > ul > li {
+            margin-bottom: 20px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &.is-active {
         @include u-showElement;
         .l-navMobile__content {
@@ -138,13 +152,46 @@
 }
 
 // hide menu and show hamburuger
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1190px) {
     .l-nav {
         &__menu {
             display: none;
         }
+        &__ctas {
+            flex: 1 1 auto;
+            min-width: inherit;
+            max-width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .c-mainCTAs {
+                width: 450px;
+            }
+        }
         &__hamburguer {
             display: block;
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 1px solid $secondaryLight;
+        }
+    }
+}
+
+// hide ctas
+@media screen and (max-width: 840px) {
+    .l-nav {
+        .u-container {
+            justify-content: space-between;
+        }
+        &__brand {
+            @include flexWidth(120px);
+        }
+        &__ctas {
+            display: none;
+        }
+        &__hamburguer {
+            margin: 0;
+            padding: 0;
+            border: 0;
         }
     }
 }

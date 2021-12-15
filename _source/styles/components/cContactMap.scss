@@ -1,0 +1,6 @@
+.c-contactMap {
+    > div {
+        @include roundedAll();
+        @include default__shadow;
+    }
+}

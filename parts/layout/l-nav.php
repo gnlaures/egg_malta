@@ -1,10 +1,6 @@
 <nav class="l-nav">
     <div class="l-nav__main">
         <div class="u-container">
-            <div class="l-nav__hamburguer">
-                <?php $cHamburguer = array('extraClass' => '--primary --regular --rounded js-openNavMobile');
-                include('parts/components/c-hamburguer.php'); ?>
-            </div>
             <div class="l-nav__brand">
                 <?php $cBrand = array('brandModifier' => '', 'url' => 'home');
                 include('parts/components/c-brand.php'); ?>
@@ -19,6 +15,10 @@
                     <li><a href="#" class="c-btn --primary">Conheça os serviços</a></li>
                 </ul>
             </div>
+            <div class="l-nav__hamburguer">
+                <?php $cHamburguer = array('extraClass' => '--primary --bold --rounded js-openNavMobile');
+                include('parts/components/c-hamburguer.php'); ?>
+            </div>
         </div>
     </div>
 </nav>
@@ -27,7 +27,7 @@
     <div class="l-navMobile__mask js-closeNavMobile"></div>
     <div class="l-navMobile__content --right">
         <div class="l-navMobile__close">
-            <?php $cHamburguer = array('extraClass' => '--primary --regular --rounded js-closeNavMobile is-active');
+            <?php $cHamburguer = array('extraClass' => '--primary --bold --rounded js-closeNavMobile is-active');
             include('parts/components/c-hamburguer.php'); ?>
         </div>
         <div class="l-navMobile__hero">

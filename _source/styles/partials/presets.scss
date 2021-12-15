@@ -23,10 +23,11 @@
     }
     a {
         color: $primary;
-        text-decoration: underline;
+        text-decoration: none;
         font-weight: $fwMedium;
         &:hover {
-            text-decoration: none;
+            color: $primaryDark;
+            text-decoration: underline;
         }
     }
     @media screen and (max-width: 430px) {

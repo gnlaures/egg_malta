@@ -42,3 +42,39 @@
         }
     }
 }
+
+@media screen and (max-width: 630px) {
+    .c-mainCTAs {
+        > li {
+            margin-right: 0;
+            &:first-of-type {
+                @include flexWidth(50%);
+                padding-right: 5px;
+            }
+            &:last-of-type {
+                @include flexWidth(50%);
+                padding-left: 5px;
+            }
+        }
+        > span {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-mainCTAs {
+        flex-wrap: wrap;
+        > li {
+            &:first-of-type {
+                @include flexWidth(100%);
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+            &:last-of-type {
+                @include flexWidth(100%);
+                padding-left: 0;
+            }
+        }
+    }
+}

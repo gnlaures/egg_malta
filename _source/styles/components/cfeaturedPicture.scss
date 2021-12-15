@@ -53,4 +53,11 @@
             width: 100%;
         }
     }
+
+    &.--bgTop {
+        .c-featuredPicture__bgEffect {
+            bottom: 30px;
+            height: 95%;
+        }
+    }
 }

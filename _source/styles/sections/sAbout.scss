@@ -23,6 +23,22 @@
         }
     }
 
+    &.--reverse {
+        .s-aboutUs__picture {
+            order: 2;
+            padding-right: 0;
+            padding-left: 40px;
+        }
+        .s-aboutUs__content {
+            order: 1;
+            padding-left: 0;
+            padding-right: 40px;
+            h2, p {
+                text-align: right;
+            }
+        }
+    }
+
     .c-mainCTAs {
         max-width: 480px;
     }

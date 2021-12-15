@@ -1,7 +1,7 @@
 <div class="c-smartMenu <?php echo $cMainMenu["extraClass"] ?>">
     <ul>
         <li>
-            <a href="#">Serviços</a>
+            <a>Serviços</a>
             <ul>
                 <li><a href="#">Gestão de Mídias Sociais</a></li>
                 <li><a href="#">Facebook Ads & Instagram Ads</a></li>

@@ -5,3 +5,11 @@
     display: block;
     background: $white2;
 }
+
+.l-page.--about {
+    .s-aboutUs {
+        &:first-of-type {
+            padding-top: 120px;
+        }
+    }
+}

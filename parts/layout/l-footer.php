@@ -20,7 +20,7 @@
     <div class="l-footer__copyright">
         <div class="u-container">
             <span class="reserved">© 2021 Malta Digital. Todos os direitos reservados</span>
-            <a href="#" class="by">by <span>Egg Criativo</span></a>
+            <span class="by">by <a href="https://www.instagram.com/eggcriativo"><span>Egg Criativo</span></a></span>
         </div>
     </div>
 </footer>

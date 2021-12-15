@@ -35,6 +35,17 @@
         margin-left: -40px;
     }
     &__copyright {
-
+        padding: 30px 0;
+        border-top: 1px solid $secondaryLight;
+        .u-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        .by,
+        .reserved {
+            @include paragrafos($fs: 14px, $tc: $gray4);
+        }
     }
 }
