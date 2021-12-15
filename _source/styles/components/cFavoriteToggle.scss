@@ -1,0 +1,249 @@
+// c-favoriteToggle
+$cFavoriteToggle__small: 30px;
+$cFavoriteToggle__smallIcon: 16px;
+$cFavoriteToggle__medium: 40px;
+$cFavoriteToggle__mediumIcon: 22px;
+$cFavoriteToggle__large: 56px;
+$cFavoriteToggle__largeIcon: 40px;
+.c-favoriteToggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    &__icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        svg {
+            position: relative;
+            display: block;
+        }
+        &.--stroke {
+            @include u-showElement;
+        }
+        &.--fill {
+            @include u-hideElement;
+        }
+    }
+    &__count {
+        @include roundedAll(50%);
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        text-align: center;
+        font-size: 12px;
+        //
+        display: none;
+    }
+
+    // themes
+    &.--iconStrokeWhite {
+        .c-favoriteToggle__icon {
+            &.--stroke {
+                svg path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+    &.--iconStrokePrimary {
+        .c-favoriteToggle__icon {
+            &.--stroke {
+                svg path {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+    &.--iconStrokeSecondary {
+        .c-favoriteToggle__icon {
+            &.--stroke {
+                svg path {
+                    fill: $secondary;
+                }
+            }
+        }
+    }
+    &.--iconStrokeGray {
+        .c-favoriteToggle__icon {
+            &.--stroke {
+                svg path {
+                    fill: $gray6;
+                }
+            }
+        }
+    }
+    &.--iconStrokeRed {
+        .c-favoriteToggle__icon {
+            &.--stroke {
+                svg path {
+                    fill: $feedbackError;
+                }
+            }
+        }
+    }
+
+    &.--iconFillWhite {
+        .c-favoriteToggle__icon {
+            &.--fill {
+                svg path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+    &.--iconFillPrimary {
+        .c-favoriteToggle__icon {
+            &.--fill {
+                svg path {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+    &.--iconFillSecondary {
+        .c-favoriteToggle__icon {
+            &.--fill {
+                svg path {
+                    fill: $secondary;
+                }
+            }
+        }
+    }
+    &.--iconFillGray {
+        .c-favoriteToggle__icon {
+            &.--fill {
+                svg path {
+                    fill: $gray6;
+                }
+            }
+        }
+    }
+    &.--iconFillRed {
+        .c-favoriteToggle__icon {
+            &.--fill {
+                svg path {
+                    fill: $feedbackError;
+                }
+            }
+        }
+    }
+
+    // sizes
+    &.--small {
+        width: $cFavoriteToggle__small;
+        height: $cFavoriteToggle__small;
+        .c-favoriteToggle__icon {
+            width: $cFavoriteToggle__small;
+            height: $cFavoriteToggle__small;
+            svg {
+                width: $cFavoriteToggle__smallIcon;
+                height: $cFavoriteToggle__smallIcon;
+            }
+        }
+    }
+    &.--medium {
+        width: $cFavoriteToggle__medium;
+        height: $cFavoriteToggle__medium;
+        .c-favoriteToggle__icon {
+            width: $cFavoriteToggle__medium;
+            height: $cFavoriteToggle__medium;
+            svg {
+                width: $cFavoriteToggle__mediumIcon;
+                height: $cFavoriteToggle__mediumIcon;
+            }
+        }
+    }
+    &.--large {
+        width: $cFavoriteToggle__large;
+        height: $cFavoriteToggle__large;
+        .c-favoriteToggle__icon {
+            width: $cFavoriteToggle__large;
+            height: $cFavoriteToggle__large;
+            svg {
+                width: $cFavoriteToggle__largeIcon;
+                height: $cFavoriteToggle__largeIcon;
+            }
+        }
+    }
+
+    // extras
+    &.--rounded {
+        @include roundedAll(50%);
+    }
+
+    // bgs
+    &.--bgWhite {
+        background: $white;
+    }
+    &.--bgPrimary {
+        background: $primary;
+    }
+    &.--bgSecondary {
+        background: $secondary;
+    }
+    &.--bgGray {
+        background: $gray6;
+    }
+    &.--bgRed {
+        background: $feedbackError;
+    }
+
+    &.--withCount {
+        .c-favoriteToggle__count {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background: $gray2;
+        }
+    }
+    //
+    //// themes
+    //&.--primary {
+    //    // default icon
+    //    .c-favoriteToggle__icon {
+    //        svg path {
+    //            fill: $primary;
+    //        }
+    //    }
+    //    // rounded icon
+    //    &.--rounded {
+    //        background: $primary;
+    //        .c-favoriteToggle__icon {
+    //            &.--stroke {
+    //                svg path {
+    //                    fill: $white;
+    //                }
+    //            }
+    //            &.--fill {
+    //                svg path {
+    //                    fill: $white;
+    //                }
+    //            }
+    //        }
+    //    }
+    //    .c-favoriteToggle__count {
+    //        background: $primaryDark;
+    //        color: $white;
+    //    }
+    //}
+
+    // is-active
+    &.is-active {
+        .c-favoriteToggle__icon {
+            &.--stroke {
+                @include u-hideElement;
+            }
+            &.--fill {
+                @include u-showElement;
+            }
+        }
+    }
+}

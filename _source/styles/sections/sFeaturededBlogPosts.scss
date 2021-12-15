@@ -1,0 +1,18 @@
+.s-featuredBlogPosts {
+    //background: $white2;
+    .s-defaultSection__head {
+        .u-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    .c-responsiveGrid {
+        @include calcWidthForPositionNegative(-10px);
+        > li {
+            padding: 10px;
+        }
+    }
+}

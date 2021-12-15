@@ -1,0 +1,33 @@
+.s-projectComponents {
+    .u-container {
+        display: flex;
+        flex-direction: row;
+        // align-items: flex-start;
+    }
+    &__aside {
+        @include flexWidth(240px);
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-right: 1px solid $gray1;
+        // position: sticky;
+        // top: 0;
+    }
+    &__content {
+        flex: 1 1 auto;
+        padding-left: 60px;
+        padding-top: 45px;
+        padding-bottom: 60px;
+        overflow: hidden;
+        .c-cpt {
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid $gray1;
+            &:last-of-type {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}

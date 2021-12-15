@@ -1,0 +1,100 @@
+.c-cpt {
+    &__head {
+        display: block;
+        h2 {
+            @include paragrafos($fs: 26px, $fw: $fwBold, $tc: $primary);
+        }
+        span {
+            @include paragrafos($fs: 18px, $fw: $fwBold);
+        }
+    }
+    &__table {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 18px;
+        ul {
+            margin-top: 15px;
+        }
+        li {
+            padding: 5px 0;
+            border-bottom: 1px solid $gray1;
+            &:last-of-type {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            &:first-of-type {
+                padding-top: 0;
+            }
+            h4, p {
+                @include paragrafos();
+            }
+            h4 {
+                font-weight: $fwBold;
+            }
+        }
+    }
+    &__code {
+        margin-bottom: 15px;
+    }
+    &__content {
+        margin-bottom: 15px;
+        > .c-responsiveGrid {
+            @include calcWidthForPositionNegative(-5px);
+            > li {
+                padding: 5px;
+            }
+        }
+    }
+    &__container {
+        @include roundedAll();
+        border: 1px solid $gray1;
+        padding: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        min-height: 120px;
+    }
+    &__text {
+        p {
+            @include paragrafos();
+        }
+    }
+}
+.c-cardIcon {
+    @include transition();
+    @include roundedAll();
+    padding: 25px 20px;
+    border: 1px solid $gray2;
+    &__content {
+        display: block;
+        width: 100%;
+    }
+    i {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: 0 auto;
+        svg {
+            path {
+                fill: $secondary;
+            }
+        }
+    }
+    h3 {
+        @include textUppercase;
+        text-align: center;
+        margin: 15px 0 10px 0;
+    }
+    p {
+        @include paragrafos();
+        text-align: center;
+    }
+    &:hover {
+        background: $white;
+    }
+}

@@ -1,0 +1,41 @@
+* {
+    appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-end: 0;
+    -webkit-margin-start: 0;
+
+    font-family: $fontFamily__default;
+    font-weight: normal;
+    list-style: none;
+    text-decoration: none;
+
+    @include userSelect();
+    @include selection {
+        background-color: $primary;
+    }
+}
+
+body {
+    //@include scroll($bg: $white, $bar: $primary, $size: 10px);
+    overflow-x: hidden;
+    display: block;
+    min-height: 100vh;
+    background: $white2;
+}

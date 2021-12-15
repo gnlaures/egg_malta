@@ -1,0 +1,54 @@
+// theme
+@import "partials/theme.scss";
+
+// utilities
+@import "partials/mixins.scss";
+@import "partials/animations.scss";
+@import "partials/reset.scss";
+@import "partials/presets.scss";
+@import "partials/utilities.scss";
+@import "partials/crossBrowser.scss";
+@import "partials/librariesEdits.scss";
+
+// components
+@import "components/cBrand.scss";
+@import "components/cBtn.scss";
+@import "components/cFavoriteToggle.scss";
+@import "components/cForm.scss";
+@import "components/cFormFeedback.scss";
+@import "components/cHamburguer.scss";
+@import "components/cResponsiveGrid.scss";
+@import "components/cSmartMenu.scss";
+@import "components/cSocialList.scss";
+@import "components/cToggleList.scss";
+@import "components/cWhatsAppLink.scss";
+
+// project components
+@import "components/cCardService.scss";
+@import "components/cCardBlogResume.scss";
+@import "components/cCardRequireContact.scss";
+@import "components/cMainCtas.scss";
+@import "components/cfeaturedPicture.scss";
+@import "components/cLinkReadMore.scss";
+
+// sections
+@import "sections/s404.scss";
+@import "sections/sDefaultSection.scss";
+@import "sections/sOnlyText.scss";
+@import "sections/sServices.scss";
+@import "sections/sFeaturededBlogPosts.scss";
+@import "sections/sAbout.scss";
+@import "sections/sClients.scss";
+@import "sections/sRequireContact.scss";
+
+// layouts
+@import "layout/lPage";
+@import "layout/lNav";
+@import "layout/lHeaderHome";
+@import "layout/lFooter";
+
+// boilerplate page
+@import "components/cBoilerCode.scss";
+@import "components/cBoilerComponent";
+@import "sections/sBoilerListComponents";
+@import 'sections/sBoilerProjectComponents';

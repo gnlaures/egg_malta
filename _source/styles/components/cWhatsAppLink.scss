@@ -1,0 +1,100 @@
+.c-whatsAppLink {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 60px;
+    z-index: 12;
+    &__icon {
+        @include roundedAll(50%);
+        @include flexWidth(60px);
+        @include transition();
+        background: $whatsappPrimary;
+        background: radial-gradient(circle, $whatsappPrimary 0%, $whatsappSecondary 100%);
+        -webkit-box-shadow: 0px 0px 29px -3px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 0px 29px -3px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 29px -3px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        height: 60px;
+        cursor: pointer;
+        img, svg {
+            @include transition();
+            @include transforms(rotate(10deg));
+            width: 30px;
+            height: 28px;
+            display: block;
+            path {
+                fill: $white !important;
+            }
+        }
+        &:hover {
+            @include transforms(scale(1.1), center);
+        }
+    }
+    &__infos {
+        @include u-hideElement;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: right;
+        div {
+            @include flexWidth(100%);
+            display: block;
+            width: 100%;
+            max-height: 24px;
+        }
+        span {
+            position: relative;
+            right: -60px;
+            display: inline-block;
+            font-weight: 700;
+            padding: 0 40px 0 15px;
+            height: 24px;
+            line-height: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            &.wppCaption {
+                @include transition();
+                background: $gray1;
+                color: $whatsappSecondary;
+                font-size: 13px;
+                @include rounded(top, left, 15px);
+                @include rounded(bottom, left, 15px);
+                @include rounded(top, right, 15px);
+            }
+            &.wppNumber {
+                @include transition($delay: 100ms);
+                background: $white;
+                color: $whatsappSecondary;
+                font-size: 14px;
+                @include rounded(bottom, left, 15px);
+                @include rounded(bottom, right, 15px);
+            }
+        }
+    }
+    &:hover {
+        max-width: 480px;
+        .m_whatsApp__infos {
+            @include transition($delay: 100ms);
+            @include u-showElement;
+            span {
+                right: -25px;
+            }
+        }
+        .m_whatsApp__icon {
+            img, svg {
+                @include transforms(rotate(0deg));
+            }
+        }
+    }
+}

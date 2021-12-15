@@ -1,0 +1,119 @@
+.c-hamburguer {
+    @include flexWidth(20px);
+    @include transition();
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    &__bar {
+        @include transition();
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+
+    &.--gray {
+        .c-hamburguer__bar {
+            background: $gray4;
+        }
+    }
+    &.--white {
+        .c-hamburguer__bar {
+            background: $white;
+        }
+    }
+    &.--primary {
+        .c-hamburguer__bar {
+            background: $primary;
+        }
+    }
+    &.--secondary {
+        .c-hamburguer__bar {
+            background: $secondary;
+        }
+    }
+
+    &.--light {
+        .c-hamburguer__bar {
+            height: 1px;
+        }
+    }
+    &.--regular {
+        .c-hamburguer__bar {
+            height: 2px;
+        }
+    }
+    &.--bold {
+        height: 17px;
+        .c-hamburguer__bar {
+            height: 3px;
+        }
+    }
+    &.--black {
+        .c-hamburguer__bar {
+            height: 4px;
+        }
+    }
+
+    &.--rounded {
+        .c-hamburguer__bar {
+            @include roundedAll();
+        }
+    }
+
+    &.is-active {
+        @include transforms(rotate(180deg), center);
+        .c-hamburguer__bar {
+            &:nth-child(1) {
+                @include transforms(rotate(45deg), center);
+            }
+            &:nth-child(2) {
+                @include opacity(0);
+            }
+            &:nth-child(3) {
+                @include transforms(rotate(-45deg), center);
+            }
+        }
+        &.--light {
+            .c-hamburguer__bar {
+                &:nth-child(1) {
+                    top: 7px;
+                }
+                &:nth-child(3) {
+                    top: -8px;
+                }
+            }
+        }
+        &.--regular {
+            .c-hamburguer__bar {
+                &:nth-child(1) {
+                    top: 6px;
+                }
+                &:nth-child(3) {
+                    top: -8px;
+                }
+            }
+        }
+        &.--bold {
+            .c-hamburguer__bar {
+                &:nth-child(1) {
+                    top: 6px;
+                }
+                &:nth-child(3) {
+                    top: -8px;
+                }
+            }
+        }
+        &.--black {
+            .c-hamburguer__bar {
+                &:nth-child(1) {
+                    top: 6px;
+                }
+                &:nth-child(3) {
+                    top: -6px;
+                }
+            }
+        }
+    }
+}

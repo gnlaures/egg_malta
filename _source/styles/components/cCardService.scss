@@ -1,0 +1,100 @@
+.c-cardService {
+    @include transition();
+    @include roundedAll(0);
+    display: block;
+    padding: 40px 40px 0 40px;
+    box-shadow: 0 0 0 0 rgba(57, 57, 57, 0.05);
+    z-index: 1;
+    background: transparent;
+    position: relative;
+    &:before {
+        @include roundedAll(30px);
+        @include transition();
+        @include u-hideElement;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    * {
+        position: relative;
+        z-index: 2;
+    }
+    hr {
+        @include default__spacer();
+        @include transition();
+        margin: 20px 0;
+        top: 0;
+    }
+    &__icon {
+        @include transition();
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: $gray1;
+        margin-bottom: 20px;
+        top: 0;
+    }
+    &__title {
+        @include transition();
+        top: 0;
+        h3 {
+            @include transition();
+            font-family: $fontFamily__osc;
+            font-size: 36px;
+            font-weight: $fwBold;
+            color: $secondary;
+            line-height: 0.9;
+        }
+    }
+    &__text {
+        @include transition();
+        top: 0;
+        p {
+            @include paragrafos();
+        }
+    }
+    &__btn {
+        @include flexWidth(100%);
+        @include transition();
+        @include u-hideElement;
+        margin-top: 0;
+        .c-btn {
+            @include flexWidth(100%);
+        }
+    }
+    &:hover {
+        @include roundedAll();
+        box-shadow: 0 2px 103.88px 2.12px rgba(57, 57, 57, 0.05);
+        //padding-bottom: 40px;
+        z-index: 2;
+        &:before {
+            @include u-showElement;
+            @include calc(height, 100%, '+', 60px);
+            top: -30px;
+            background: $white;
+        }
+        hr {
+            width: 50%;
+            top: -30px;
+        }
+        .c-cardService__title {
+            top: -30px;
+            h3 {
+                color: $primary;
+            }
+        }
+        .c-cardService__text {
+            top: -30px;
+        }
+        .c-cardService__icon {
+            top: -30px;
+        }
+        .c-cardService__btn {
+            @include u-showElement();
+        }
+    }
+}

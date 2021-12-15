@@ -1,0 +1,48 @@
+:root {
+    /* colors */
+    --primaryLight: #ffcb30;
+    --primary: #fdbd00;
+    --primaryDark: #d9a202;
+
+    --secondaryLight: #2c2f32;
+    --secondary: #17191c;
+    --secondaryDark: #090a0b;
+
+    --white: #fff;
+    --white2: #f9f9f9;
+    --white3: #f4f4f4;
+
+    --gray1: #f0f0f0;
+    --gray2: #d7d7d7;
+    --gray3: #c1c1c1;
+    --gray4: #9e9e9e;
+    --gray5: #838383;
+    --gray6: #535353;
+
+    --black: #000000;
+    --black1: #111111;
+    --black2: #222222;
+
+    --feedbackSuccess: #1ca33d;
+    --feedbackLoad: #eee;
+    --feedbackError: #f05555;
+
+    --whatsappPrimary: #25d366;
+    --whatsappSecondary: #1eb456;
+
+    --text: #5d5d5d;
+    --textLight: #737373;
+    --placeholderText: rgba(78, 78, 78, 0.75);
+
+    /* sizes */
+    --containerPadding: 50px;
+    --containerWidth: 1540px;
+    --containerBigWidth: 100%;
+    --maxRowWidth: 2560px;
+    --defaultRadius: 30px;
+
+    /* fonts */
+    --fontFamily__default: 'Open Sans', 'Roboto', 'Arial', 'Calibri', sans-serif;
+    --fontFamily__osc: 'Open Sans Condensed', 'Roboto', 'Arial', 'Calibri', sans-serif;
+    --fontFamily__bebas: 'Bebas Neue', 'Open Sans', 'Roboto', 'Arial', 'Calibri', sans-serif;
+}

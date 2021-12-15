@@ -1,0 +1,30 @@
+.c-responsiveGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    &.--col12 {> li {@extend .u-fw8;}}
+    &.--col11 {> li {@extend .u-fw9;}}
+    &.--col10 {> li {@extend .u-fw10;}}
+    &.--col9 {> li {@extend .u-fw11;}}
+    &.--col8 {> li {@extend .u-fw12;}}
+    &.--col7 {> li {@extend .u-fw14;}}
+    &.--col6 {> li {@extend .u-fw16;}}
+    &.--col5 {> li {@extend .u-fw20;}}
+    &.--col4 {> li {@extend .u-fw25;}}
+    &.--col3 {> li {@extend .u-fw33;}}
+    &.--col2 {> li {@extend .u-fw50;}}
+    &.--col1 {> li {@extend .u-fw100;}}
+    &.--colNaN {
+        > li {
+            flex: 1 1 auto;
+        }
+    }
+
+    &.--start {
+        justify-content: flex-start;
+    }
+    &.--end {
+        justify-content: flex-end;
+    }
+}

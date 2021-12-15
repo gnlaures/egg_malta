@@ -1,0 +1,42 @@
+.c-linkReadMore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    i {
+        @include transition();
+        @include roundedAll(50%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: $primary;
+        svg {
+            display: block;
+            width: 18px;
+            height: 18px;
+        }
+    }
+    span {
+        @include transition();
+        color: $primary;
+        font-family: $fontFamily__bebas;
+        font-size: 22px;
+        position: relative;
+        top: 2px;
+        padding-right: 10px;
+    }
+    &:hover {
+        i {
+            background: $secondary;
+            svg path {
+                stroke: $primary;
+            }
+        }
+        span {
+            color: $secondary;
+        }
+    }
+}

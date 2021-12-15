@@ -1,0 +1,55 @@
+.c-formFeedback {
+    @keyframes animationRotateLoader {
+        from {@include transforms(rotate(0deg), center)}
+        to {@include transforms(rotate(360deg), center)}
+    }
+    @include roundedAll($radius: 5px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    line-height: 28px;
+    padding: 20px;
+    i {
+        @include flexWidth(40px);
+        max-height: 40px;
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    span {
+        display: block;
+        padding-left: 15px;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    &.--error {
+        background: $feedbackError;
+        span {
+            color: $white;
+        }
+    }
+    &.--load {
+        background: $feedbackLoad;
+        span {
+            color: $text;
+        }
+        i {
+            animation-name: animationRotateLoader;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+    &.--success {
+        background: $feedbackSuccess ;
+        span {
+            color: $white;
+        }
+    }
+}

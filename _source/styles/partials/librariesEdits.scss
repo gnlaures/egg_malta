@@ -1,0 +1,85 @@
+// default select 2
+.select2-container {
+	z-index: 5;
+}
+.select2-dropdown {
+	display: block;
+	background: transparent;
+	padding: 0 20px;
+	border: 0;
+	.select2-search {
+		background: red;
+		padding: 0;
+		border: 1px solid $gray2;
+		position: relative;
+		display: block;
+		input {
+			@include transition();
+			@include labels($tc: $text);
+			font-weight: $fwLight;
+			border: 0 !important;
+			height: 44px;
+			line-height: 44px;
+			padding: 0 44px 0 50px;
+			background: $white;
+			width: 100%;
+			display: block;
+			&:focus {
+				background: $white3;
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 12px;
+			left: 20px;
+			z-index: 2;
+			background: url(#{$media_icons}icon_search.svg);
+		}
+	}
+	.select2-results {
+		@include rounded(bottom, left, $defaultRadius);
+		@include rounded(bottom, right, $defaultRadius);
+		background: transparent;
+		.select2-results__options {
+			@include scroll();
+			.select2-results__option {
+				@include paragrafos();
+				padding: 8px 20px;
+				background: $white2;
+				cursor: pointer;
+			}
+			.select2-results__option--selectable {
+				//background: $field_bg;
+			}
+			.select2-results__option--highlighted {
+				background: $primary;
+				color: $white;
+			}
+			.select2-results__option--selected {
+				background: $gray1;
+				color: $primaryDark;
+			}
+		}
+	}
+}
+
+// swiper
+.swiper-pagination {
+	.swiper-pagination-bullet {
+		@include roundedAll(3px);
+		background: $white;
+		width: 30px;
+		height: 5px;
+		margin-right: 5px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	.swiper-pagination-bullet-active {
+		background: $primary;
+	}
+}

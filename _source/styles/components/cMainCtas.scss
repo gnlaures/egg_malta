@@ -1,0 +1,44 @@
+.c-mainCTAs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    > li,
+    > span {
+        display: block;
+        margin-right: 20px;
+    }
+    > li {
+        flex: 1 1 auto;
+        &:last-of-type {
+            @include flexWidth(230px);
+            margin-right: 0;
+        }
+    }
+    > span {
+        font-family: $fontFamily__bebas;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .c-btn {
+        @include flexWidth(100%);
+    }
+
+    &.--hiddenSpan {
+        span {
+            display: none;
+        }
+    }
+    &.--mr10 {
+        >li, >span {
+            margin-right: 10px;
+        }
+        >li {
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

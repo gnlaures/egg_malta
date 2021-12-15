@@ -1,0 +1,63 @@
+// Layout Colors
+
+$primaryLight: var(--primaryLight);
+$primary: var(--primary);
+$primaryDark: var(--primaryDark);
+
+$secondaryLight: var(--secondaryLight);
+$secondary: var(--secondary);
+$secondaryDark: var(--secondaryDark);
+
+$white: var(--white);
+$white2: var(--white2);
+$white3: var(--white3);
+
+$gray1: var(--gray1);
+$gray2: var(--gray2);
+$gray3: var(--gray3);
+$gray4: var(--gray4);
+$gray5: var(--gray5);
+$gray6: var(--gray6);
+
+$black: var(--black);
+$black1: var(--black1);
+$black2: var(--black2);
+
+$feedbackSuccess: var(--feedbackSuccess);
+$feedbackLoad: var(--feedbackLoad);
+$feedbackError: var(--feedbackError);
+
+$whatsappPrimary: var(--whatsappPrimary);
+$whatsappSecondary: var(--whatsappSecondary);
+
+$text: var(--text);
+$textLight: var(--textLight);
+$placeholderText: var(--placeholderText);
+
+// Sizes
+$containerPadding: var(--containerPadding);
+$containerWidth: var(--containerWidth);
+$containerBigWidth: var(--containerBigWidth);
+$maxRowWidth: var(--maxRowWidth);
+$defaultRadius: var(--defaultRadius);
+
+// media folders
+$media_assets: "../media/img/assets/";
+$media_icons: "../media/img/icons/";
+$media_content: "../media/img/content/";
+
+// fonts
+$fontFamily__default: var(--fontFamily__default);
+$fontFamily__bebas: var(--fontFamily__bebas);
+$fontFamily__osc: var(--fontFamily__osc);
+
+// font weight
+$fwThin: 100;
+$fwExtraLight: 200;
+$fwLight: 300;
+$fwRegular: 400;
+$fwMedium: 500;
+$fwSemiBold: 600;
+$fwBold: 700;
+$fwExtraBold: 800;
+$fwBlack: 900;

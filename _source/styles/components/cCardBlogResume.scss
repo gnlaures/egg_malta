@@ -1,0 +1,47 @@
+.c-cardBlogResume {
+    @include transition();
+    @include roundedAll();
+    @include default__shadow;
+    display: block;
+    &__picture {
+        @include roundedAll();
+        @extend .u-aspectRatio;
+        @extend .--ratio-16-9;
+        img {
+            @include transition();
+        }
+    }
+    &__content {
+        @include transition();
+        padding: 30px;
+        position: relative;
+        hr {
+            @include default__spacer();
+            position: absolute;
+            top: -4px;
+        }
+        h3 {
+            @include default__title($fs: 34px, $tc: $secondary);
+            @include transition();
+            margin-bottom: 12px;
+        }
+        p {
+            @include paragrafos();
+        }
+    }
+    &:hover {
+        .c-cardBlogResume__picture {
+            img {
+                @include scale(1.05, center);
+            }
+        }
+        .c-cardBlogResume__content {
+            h3 {
+                color: $primary;
+            }
+            hr {
+                width: 40%;
+            }
+        }
+    }
+}

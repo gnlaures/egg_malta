@@ -1,0 +1,28 @@
+#Comprimir site para ocupar menor banda
+#AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+#BrowserMatch ^Mozilla/4 gzip-only-text/html
+#BrowserMatch ^Mozilla/4.0[678] no-gzip
+#BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+
+#<FilesMatch \.php$>
+#    # Apache 2.4.10+ can proxy to unix socket
+#    SetHandler "proxy:unix:/var/run/php/php5.6-fpm.sock|fcgi://localhost/"
+#</FilesMatch>
+
+#php_flag display_startup_errors on
+#php_flag display_errors on
+#php_flag html_errors on
+
+#Idioma padrao
+DefaultLanguage pt-BR
+
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+#Redireciona sempre para config
+# RewriteRule ^(.*?)$ config.php
+# RewriteRule ^$ config.php
+
+#Remove listagem de diretorios
+Options -Indexes

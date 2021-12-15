@@ -1,0 +1,15 @@
+.c-cardRequireContact {
+    @include roundedAll(30px);
+    @include transition();
+    @include default__shadow;
+    background: $white;
+    padding: 30px;
+    h3 {
+        @include default__title($fs: 36px, $tc: $secondary);
+    }
+    hr {
+        @include default__spacer();
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

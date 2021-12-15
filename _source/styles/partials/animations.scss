@@ -1,0 +1,16 @@
+// Exemple:
+// use mixin
+// @include keyframes(icon__scrollDown) {
+// 	0% {top: -5px;}
+// 	100% {top: 10px;} 
+// }
+// @mixin animation__icon__scrollDown() {
+// 	animation-name: icon__scrollDown;
+// 	animation-duration: 1s;
+// 	animation-iteration-count: infinite;
+// 	animation-direction: alternate;
+// 	animation-timing-function: ease;
+// 	animation-play-state: running;
+// 	//animation-fill-mode: forwards;
+// 	//animation-delay: 2s;
+// }

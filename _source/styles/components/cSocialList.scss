@@ -1,0 +1,112 @@
+.c-socialList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+        padding: 3px;
+    }
+    a {
+        display: block;
+    }
+    svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+        path, circle {
+            @include transition();
+        }
+    }
+    &.--rounded {
+        a {
+            @include transition();
+            @include roundedAll(50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+        }
+        &.--primary {
+            a {
+                background: $primary;
+                svg path, svg circle {
+                    fill: $white !important;
+                }
+                &:hover {
+                    background: $primaryDark;
+                }
+            }
+        }
+        &.--secondary {
+            a {
+                background: $secondary;
+                svg path, svg circle {
+                    fill: $white !important;
+                }
+                &:hover {
+                    background: $secondaryDark;
+                }
+            }
+        }
+        &.--white {
+            a {
+                background: $white;
+                svg path, svg circle {
+                    fill: $gray4 !important;
+                }
+                &:hover {
+                    background: $white3;
+                }
+            }
+        }
+    }
+    &.--default {
+        a {
+            @include transition();
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+        }
+        &.--primary {
+            a {
+                svg path, svg circle {
+                    fill: $primary !important;
+                }
+                &:hover {
+                    svg path, svg circle {
+                        fill: $primaryDark !important;
+                    }
+                }
+            }
+        }
+        &.--secondary {
+            a {
+                svg path, svg circle {
+                    fill: $secondary !important;
+                }
+                &:hover {
+                    svg path, svg circle {
+                        fill: $secondaryDark !important;
+                    }
+                }
+            }
+        }
+        &.--white {
+            a {
+                svg path, svg circle {
+                    fill: $white !important;
+                }
+                &:hover {
+                    svg path, svg circle {
+                        fill: $white3 !important;
+                    }
+                }
+            }
+        }
+    }
+}

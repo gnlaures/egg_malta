@@ -1,0 +1,81 @@
+@mixin paragrafos(
+    $tc: $text,
+    $fw: $fwLight,
+    $fs: 20px,
+    $lh: 1.2,
+    $important: false
+) {
+    color: $tc is-important($important);
+    font-size: $fs is-important($important);
+    font-weight: $fw is-important($important);
+    line-height: $lh is-important($important);
+    strong, b {
+        font-weight: $fwBold;
+        color: $tc;
+        font-size: $fs;
+        line-height: $lh;
+    }
+    u {
+        text-decoration: underline;
+    }
+    i {
+        font-style: italic;
+    }
+    a {
+        color: $primary;
+        text-decoration: underline;
+        font-weight: $fwMedium;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    @media screen and (max-width: 430px) {
+        font-size: $fs - 2;
+        a, strong {
+            font-size: $fs - 2;
+        }
+    }
+}
+
+@mixin labels(
+    $tc: $gray5,
+    $fs: 18px,
+    $important: false
+) {
+    color: $tc is-important($important);;
+    font-size: $fs is-important($important);;
+    line-height: 1.2 is-important($important);;
+    font-weight: $fwRegular is-important($important);
+    font-family: $fontFamily__bebas;
+}
+
+@mixin default__title($fs: 90px, $tc: $primary) {
+    display: block;
+    font-family: $fontFamily__osc;
+    font-weight: $fwBold;
+    font-size: $fs;
+    line-height: 0.90;
+    color: $tc;
+    position: relative;
+}
+@mixin default__spacer($bg: $primary) {
+    @include transition();
+    display: block;
+    width: 50px;
+    height: 7px;
+    background: $bg;
+}
+@mixin textUppercase($fs: 18px, $fw: $fwRegular, $tc: $text) {
+    display: block;
+    font-weight: $fw;
+    font-size: $fs;
+    color: $tc;
+    text-transform: uppercase;
+    strong {
+        font-weight: $fwBold;
+    }
+}
+
+@mixin default__shadow(){
+    box-shadow: 0px 2px 103.88px 2.12px rgba(57, 57, 57, 0.1);
+}

@@ -1,0 +1,42 @@
+.s-requireContact {
+    @include bg(assets, 'bg_yellow.jpg', no-repeat, cover, fixed, center);
+    background-color: $primary;
+    .u-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 1280px;
+    }
+    &__call {
+        flex: 1 1 auto;
+        padding-right: 80px;
+        display: block;
+        position: relative;
+        padding-top: 55px;
+        &:after {
+            @include bg(assets, 'arrow.png', no-repeat, contain, inherit, center);
+            content: '';
+            display: block;
+            width: 140px;
+            height: 56px;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+        }
+        h2 {
+            @include default__title($fs: 72px, $tc: $secondary);
+            margin-bottom: 25px;
+        }
+        p {
+            font-weight: $fwRegular;
+            font-size: 22px;
+            color: $secondary;
+            padding-left: 60px;
+        }
+    }
+
+    &__form {
+        @include flexWidth(500px);
+    }
+}

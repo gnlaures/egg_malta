@@ -1,0 +1,216 @@
+// set !important if necessary
+@function is-important($important){
+	@return #{if($important, '!important', '')};
+}
+
+// calc for all
+// @include calc(width, 100%, '-', 100px);
+@mixin calc($property, $v1, $op, $v2) {
+  #{$property}: expression(#{$v1 $op $v2});
+  #{$property}: -ms-calc(#{$v1 $op $v2});
+  #{$property}: -moz-calc(#{$v1 $op $v2});
+  #{$property}: -webkit-calc(#{$v1 $op $v2});
+  #{$property}: calc(#{$v1 $op $v2});
+}
+@mixin calcWidthForPositionNegative($negativePosition) {
+	position: relative;
+	left: $negativePosition;
+	@include calc(width, 100%, '+', $negativePosition * -2);
+}
+
+// border-radius
+@mixin roundedAll($radius: $defaultRadius) {
+	border-radius: $radius;
+}
+@mixin rounded($vert, $hor, $radius) {
+	border-#{$vert}-#{$hor}-radius: $radius;
+}
+
+// transitions e transforms
+@mixin transition($property: all, $duration:0.15s, $ease:linear, $delay: 0){
+  	-webkit-transition: $property $duration $ease;
+  	-moz-transition: $property $duration $ease;
+  	-o-transition: $property $duration $ease;
+  	-ms-transition: $property $duration $ease;
+  	transition: $property $duration $ease;
+  	-webkit-transition-delay: $delay;
+  	-moz-transition-delay: $delay;
+  	-o-transition-delay: $delay;
+  	-ms-transition-delay: $delay;
+  	transition-delay: $delay;
+}
+@mixin transforms($property, $origin: center) {
+	-webkit-transform: $property;
+	-moz-transform: $property;
+	-o-transform: $property;
+	-ms-transform: $property;
+	transform: $property;
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+@mixin rotate($rotate, $origin) {
+	@include transforms(rotate($rotate), $origin);
+}
+@mixin skew($skew, $origin) {
+	@include transforms(skew($skew), $origin);
+}
+@mixin translate($yPercent, $xPercent, $origin) {
+	@include transforms(translateY($yPercent) translateX($xPercent), $origin);
+}
+@mixin scale($scale, $origin) {
+	@include transforms(scale($scale), $origin);
+}
+
+// texts
+@mixin placeholder {
+	&.placeholder {@content}
+	&:-moz-placeholder {@content}
+	&::-moz-placeholder {@content}
+	&:-ms-placeholder {@content}
+	&::-webkit-placeholder {@content}
+	&::placeholder {@content}
+}
+@mixin mbElement($mb: 15px, $mbl: 0) {
+	margin-bottom: $mb;
+	&:last-of-type {
+		margin-bottom: $mbl;
+	}
+}
+
+// visibility
+@mixin opacity($opacity: 1) {
+	-webkit-opacity: $opacity;
+	-moz-opacity: $opacity;
+	-o-opacity: $opacity;
+	opacity: $opacity;
+	$opperc: $opacity * 100; // IE
+}
+@mixin u-showElement() {
+	@include opacity();
+	visibility: visible;
+}
+@mixin u-hideElement() {
+	@include opacity($opacity: 0);
+	visibility: hidden;
+}
+
+// effects
+@mixin pb($pb: 100%) {
+	-webkit-filter: grayscale($pb);
+	filter: grayscale($pb);
+}
+@mixin gradient($angle: 90deg, $start: $primary, $end: $primaryDark, $initPercent: 0%, $endPercent: 100%) {
+	// background: linear-gradient(-44deg, rgba(6,146,123,1) 0%, rgba(31,76,126,1) 100%);
+	// background: linear-gradient(angle,  start $initPercent, $end $endPercent);
+	background: $start;
+	background: -moz-linear-gradient($angle, $start $initPercent, $end $endPercent);
+	background: -webkit-linear-gradient($angle, $start $initPercent, $end $endPercent);
+	background: linear-gradient($angle, $start $initPercent, $end $endPercent);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$start}",endColorstr="#{end}",GradientType=1);
+}
+
+// selections
+@mixin selection {
+	&:-moz-selection {@content}
+	&::-moz-selection {@content}
+	&:-ms-selection {@content}
+	&::-webkit-selection {@content}
+	&::selection {@content}
+}
+@mixin userSelect($type: text) {
+	-webkit-user-select: $type;
+	-moz-user-select: $type;
+	-ms-user-select: $type;
+	user-select: $type;
+}
+@mixin resetSelect($style: none) {
+	-moz-appearance: $style;
+	-webkit-appearance: $style;
+	appearance: $style;
+}
+
+// backgrounds
+// @include bg(assets, 'brand.png');
+// @include bg(assets, 'brand.png', repeat, contain, inherit, center);
+@mixin bg($folder, $file, $repeat: no-repeat, $size: cover, $attach: inherit, $position: center) {
+	@if $folder == content {
+		background-image: url(#{$media_content}#{$file});
+	} @else if $folder == assets {
+		background-image: url(#{$media_assets}#{$file});
+	} @else if $folder == icons {
+		background-image: url(#{$media_icons}#{$file});
+	} @else if $folder == boilerplate {
+		background-image: url(#{$media_boilerplate}#{$file});
+	}
+	background-repeat: $repeat;
+	background-size: $size;
+	background-position: $position;
+	background-attachment: $attach;
+}
+
+// scroll
+@mixin scroll($bg: $gray1, $bar: $secondary, $size: 10px, $radius: 0px) {
+	&::-webkit-scrollbar {
+	  width: $size;
+	  height: $size;
+	}
+	&::-webkit-scrollbar-button {
+	  width: 0px;
+	  height: 0px;
+	}
+	&::-webkit-scrollbar-thumb {
+	  background: $bar;
+	  border: 0;
+	  border-radius: $radius;
+	  height: 50px;
+	}
+	&::-webkit-scrollbar-track {
+	  background: $bg;
+	  border: 0;
+	  border-radius: $radius;
+	  height: 50px;
+	}
+}
+
+// animations
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// flex sizes
+@mixin flexWidth($val) {
+	min-width: $val;
+	max-width: $val;
+	flex: 1 1 $val;
+}
+@mixin flexHeight($val) {
+	min-height: $val;
+	max-height: $val;
+	flex: 1 1 $val;
+}
+@mixin cleanFlexWidth() {
+	min-width: inherit;
+	max-width: inherit;
+	flex: 1 1 inherit;
+	width: auto;
+}
+@mixin cleanFlexHeight() {
+	min-height: inherit;
+	max-height: inherit;
+	flex: 1 1 inherit;
+	height: auto;
+}

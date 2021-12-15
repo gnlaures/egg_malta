@@ -1,0 +1,35 @@
+.s-defaultSection {
+    padding: 100px 0;
+    display: block;
+    &__head {
+        display: block;
+        margin-bottom: 60px;
+        position: relative;
+        h2 {
+            @include default__title($fs: 72px, $tc: $secondary);
+            max-width: 640px;
+        }
+        h3 {
+            @include default__title($fs: 50px, $tc: $secondary);
+            max-width: 420px;
+            &.u-ta-c {
+                margin: 0 auto;
+            }
+        }
+        &.--withLink {
+            .u-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__content {
+        display: block;
+        width: 100%;
+        p {
+            @include paragrafos();
+        }
+    }
+}

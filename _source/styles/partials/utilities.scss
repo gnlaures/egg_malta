@@ -1,0 +1,310 @@
+// opacity / visible
+.u-showElement {@include u-showElement;}
+.u-hideElement {@include u-hideElement;}
+.u-hideOpacity {@include opacity($opacity: 0);}
+.u-showOpacity {@include opacity($opacity: 1);}
+
+// display
+.u-dnone, .d-none, .dnone {display: none !important;}
+.u-dblock, .d-block, .dblock {display: block !important;}
+.u-dflex, .d-flex, .dflex {display: flex !important;}
+
+// overflow control
+.u-overflowBlocked {overflow: hidden;}
+.u-overflowBlocked_y {overflow-y: hidden;}
+.u-overflowBlocked_x {overflow-x: hidden;}
+
+// containers
+.u-container, .u-maxRow {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+.u-container {
+	max-width: $containerWidth;
+	padding: 0 $containerPadding;
+	&.--big {
+		max-width: $containerBigWidth;
+	}
+}
+.u-maxRow {
+	max-width: $maxRowWidth;
+    display: block;
+    min-height: 100vh;
+}
+
+// flex
+.u-wrap {flex-wrap: wrap;}
+.u-nowrap {flex-wrap: nowrap;}
+.u-wrapRev {flex-wrap: wrap-reverse;}
+.u-jcfe {justify-content: flex-end;}
+.u-jcfs {justify-content: flex-start;}
+.u-jcsb {justify-content: space-between;}
+.u-jcsa {justify-content: space-around;}
+.u-jcc {justify-content: center;}
+.u-aic {align-items: center;}
+.u-aifs {align-items: flex-start;}
+.u-aife {align-items: flex-end;}
+.u-fdr {flex-direction: row;}
+.u-fdc {flex-direction: column;}
+
+// default widths - used majority in float blocks
+.u-fw100 {@include flexWidth(100%)}
+.u-fw80 {@include flexWidth(80%)}
+.u-fw75 {@include flexWidth(75%)}
+.u-fw70 {@include flexWidth(70%)}
+.u-fw66 {@include flexWidth(66.6%)}
+.u-fw65 {@include flexWidth(65%)}
+.u-fw60 {@include flexWidth(60%)}
+.u-fw50 {@include flexWidth(50%)}
+.u-fw40 {@include flexWidth(40%)}
+.u-fw35 {@include flexWidth(35%)}
+.u-fw33 {@include flexWidth(33.3%)}
+.u-fw30 {@include flexWidth(30%)}
+.u-fw25 {@include flexWidth(25%)}
+.u-fw20 {@include flexWidth(20%)}
+.u-fw15 {@include flexWidth(15%)}
+.u-fw16 {@include flexWidth(16.6%)}
+.u-fw14 {@include flexWidth(14.28%)} //7cols
+.u-fw12 {@include flexWidth(14.5%)}
+.u-fw11 {@include flexWidth(11.11%)}
+.u-fw10 {@include flexWidth(10%)}
+.u-fw9 {@include flexWidth(9.09%)}
+.u-fw8 {@include flexWidth(15%)}
+
+// aspect ratio elements
+.u-aspectRatio {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    > * {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &.--ratio-16-9 {
+        padding-top: 56.25%
+    }
+    &.--ratio-4-3 {
+        padding-top: 75%
+    }
+    &.--ratio-3-2 {
+        padding-top: 66.66%
+    }
+    &.--ratio-1-1 {
+        padding-top: 100%
+    }
+    &.--ratio-8-5 {
+        padding-top: 62.5%
+    }
+}
+
+// text with columns
+.u-textWithCols {
+    display: block;
+    column-gap: 40px;
+    &.--cols-1 {
+        column-count: 1;
+        max-width: 800px;
+    }
+    &.--cols-2 {
+        column-count: 2;
+    }
+    &.--cols-3 {
+        column-count: 3;
+    }
+    &.--cols-4 {
+        column-count: 4;
+    }
+}
+
+// colors
+.u-color-primaryLight {color: $primaryLight !important;}
+.u-color-primary {color: $primary !important;}
+.u-color-primaryDark {color: $primaryDark !important;}
+.u-color-secondaryLight {color: $secondaryLight !important;}
+.u-color-secondary {color: $secondary !important;}
+.u-color-secondaryDark {color: $secondaryDark !important;}
+.u-color-mutedGray {color: $gray1 !important;}
+.u-color-lightGray {color: $gray2 !important;}
+.u-color-mediumGray {color: $gray3 !important;}
+.u-color-darkGray {color: $gray6 !important;}
+.u-color-baseGray {color: $gray4 !important;}
+.u-color-transparent {color: transparent !important;}
+.u-color-white {color: $white !important;}
+.u-color-white2 {color: $white2 !important;}
+.u-color-white3 {color: $white3 !important;}
+.u-color-textDefault {color: $text !important;}
+
+// align
+.u-ta-c {text-align: center;}
+.u-ta-r {text-align: right;}
+.u-ta-l {text-align: left;}
+
+// bgs
+.u-bg-primaryLight {background: $primaryLight !important;}
+.u-bg-primary {background: $primary !important;}
+.u-bg-primaryDark {background: $primaryDark !important;}
+.u-bg-secondaryLight {background: $secondaryLight !important;}
+.u-bg-secondary {background: $secondary !important;}
+.u-bg-secondaryDark {background: $secondaryDark !important;}
+.u-bg-mutedGray {background: $gray1 !important;}
+.u-bg-lightGray {background: $gray2 !important;}
+.u-bg-mediumGray {background: $gray3 !important;}
+.u-bg-darkGray {background: $gray6 !important;}
+.u-bg-baseGray {background: $gray4 !important;}
+.u-bg-transparent {background: transparent !important;}
+.u-bg-white {background: $white !important;}
+.u-bg-white2 {background: $white2 !important;}
+.u-bg-white3 {background: $white3 !important;}
+
+// margins, paddings, borders
+.u-noMargin {margin: 0;}
+.u-noMarginLeft {margin-left: 0;}
+.u-noMarginRight {margin-right: 0;}
+.u-noMarginTop {margin-top: 0;}
+.u-noMarginBottom {margin-bottom: 0;}
+.u-noPadding {padding: 0;}
+.u-noPaddingLeft {padding-left: 0;}
+.u-noPaddingRight {padding-right: 0;}
+.u-noPaddingTop {padding-top: 0;}
+.u-noPaddingBottom {padding-bottom: 0;}
+.u-noBorder {border: 0;}
+.u-noBorderLeft {border-left: 0;}
+.u-noBorderRight {border-right: 0;}
+.u-noBorderTop {border-top: 0;}
+.u-noBorderBottom {border-bottom: 0;}
+
+// spacers
+.u-spacer {
+    display: block;
+    padding: 0;
+    bottom: 0;
+    &.--vertical {
+        height: 100%;
+        width: 1px;
+        margin: 20px 0;
+    }
+    &.--horizontal {
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+    }
+    &.--light {
+        background: $gray2;
+    }
+    &.--dark {
+        background: $gray6;
+    }
+    &.--primary {
+        background: $primary;
+    }
+    &.--primaryDark {
+        background: $primaryDark;
+    }
+    &.--primaryLight {
+        background: $primaryLight;
+    }
+    &.--secondary {
+        background: $secondary;
+    }
+    &.--secondaryDark {
+        background: $secondaryDark;
+    }
+    &.--secondaryLight {
+        background: $secondaryLight;
+    }
+    &.--white {
+        background: $white;
+    }
+}
+
+// u-iconWithCaption
+.u-iconWithCaption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    > i, > .icon {
+        display: block;
+        * {
+            display: block;
+            object-fit: contain;
+        }
+    }
+    > span, > .caption {
+        @include paragrafos();
+    }
+
+    &.--icon10 {
+        > i, > .icon {
+            @include flexWidth(10px);
+            height: 10px;
+            * {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+    &.--icon15 {
+        > i, > .icon {
+            @include flexWidth(15px);
+            height: 15px;
+            * {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    &.--icon20 {
+        > i, > .icon {
+            @include flexWidth(20px);
+            height: 20px;
+            * {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    &.--icon25 {
+        > i, > .icon {
+            @include flexWidth(25px);
+            height: 25px;
+            * {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+    &.--icon30 {
+        > i, > .icon {
+            @include flexWidth(30px);
+            height: 30px;
+            * {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &.u-jcfs {
+        > span, > .caption {
+            padding-left: 10px;
+        }
+    }
+    &.u-jcfe {
+        > span, > .caption {
+            padding-right: 10px;
+        }
+    }
+}
+
+// extras
+.u-noPointerEvents {
+	pointer-events: none;
+}

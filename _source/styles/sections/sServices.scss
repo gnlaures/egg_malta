@@ -1,0 +1,48 @@
+.s-services {
+    //background: $white2;
+    &__list {
+        @include roundedAll(30px);
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 2px 103.88px 2.12px rgba(57, 57, 57, 0.05);
+        li {
+            flex: 1 1 auto;
+            max-width: 33.3%;
+            min-width: 25%;
+            position: relative;
+            &:after {
+                @include transition();
+                @include opacity(1);
+                content: '';
+                display: block;
+                width: 1px;
+                height: 60%;
+                background: $gray2;
+                position: absolute;
+                right: 0;
+                top: 20%;
+                z-index: 2;
+            }
+            &:hover {
+                &:after {
+                    @include opacity(0);
+                }
+            }
+            &:last-of-type {
+                .c-cardService {
+                    @include rounded(top, right, 30px);
+                    @include rounded(bottom, right, 30px);
+                }
+                &:after {
+                    display: none;
+                }
+            }
+            &:first-of-type {
+                .c-cardService {
+                    @include rounded(top, left, 30px);
+                    @include rounded(bottom, left, 30px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.s-onlyText {
+    .u-container {
+        > * {
+            margin-bottom: 10px;
+        }
+    }
+    p {
+        @include paragrafos();
+    }
+    ol, ul {
+        li {
+            display: list-item;
+            list-style-position: inside;
+            @include paragrafos();
+            @include mbElement(5px);
+        }
+    }
+    ol {
+        li {
+            list-style-type: decimal-leading-zero;
+        }
+    }
+    ul {
+        li {
+            list-style-type: disc;
+        }
+    }
+    blockquote {
+        @include roundedAll();
+        @include paragrafos($fs: 22px, $fw: $fwLight);
+        @include default__shadow;
+        display: block;
+        width: 100%;
+        padding: $containerPadding;
+        background: $gray1;
+        font-style: italic;
+        text-align: center;
+        position: relative;
+        &:before {
+            content: '"';
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            font-family: 'Georgia', serif;
+            font-size: 60px;
+            color: $gray4;
+        }
+    }
+    figure {
+        @include roundedAll();
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        * {
+            display: block;
+            width: 100%;
+        }
+    }
+    h2 {
+        @include default__title($fs: 36px);
+    }
+    h3 {
+        @include default__title($fs: 32px);
+    }
+    h4 {
+        @include default__title($fs: 28px);
+    }
+    h5 {
+        @include default__title($fs: 24px);
+    }
+    h6 {
+        @include default__title($fs: 20px);
+    }
+}

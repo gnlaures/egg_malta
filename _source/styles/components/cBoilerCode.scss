@@ -1,0 +1,21 @@
+.c-code {
+    @include scroll($bg: $white3, $bar: $gray2);
+    display: block;
+    width: 100%;
+    max-height: 240px;
+    background: $white3;
+    padding: 15px;
+    overflow: auto;
+    margin-bottom: 10px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    pre {
+        font-family: monospace;
+        padding-left: 30px;
+        &.start,
+        &.end {
+            padding-left: 0;
+        }
+    }
+}

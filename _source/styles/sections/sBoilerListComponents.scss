@@ -1,0 +1,84 @@
+.s-listComponents {
+    .s-defaultSection__head {
+        margin-bottom: 35px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid $gray2;
+    }
+    &__main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    &__aside {
+        @include transition();
+        @include flexWidth(240px);
+        padding-right: 30px;
+        position: sticky;
+        .asideWidget {
+            margin-bottom: 40px;
+            h3 {
+                @include labels();
+                margin-bottom: 10px;
+            }
+            ul {
+                display: block;
+                li {
+                    @include paragrafos();
+                    margin-bottom: 2px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+                a {
+                    cursor: pointer;
+                }
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__content {
+        flex: 1 1 auto;
+        padding-left: 30px;
+        border-left: 1px solid $gray2;
+    }
+    .content__categoryHero {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $gray2;
+        &:last-of-type {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        > h2 {
+            font-size: 32px;
+            font-weight: $fwLight;
+            color: $secondary;
+            margin-bottom: 15px;
+        }
+        > p {
+            @include paragrafos();
+            max-width: 800px;
+            &:last-of-type {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .componentsList {
+        @include calcWidthForPositionNegative(-8px);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        > li {
+            padding: 8px;
+        }
+    }
+}

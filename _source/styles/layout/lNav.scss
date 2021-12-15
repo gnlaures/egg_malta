@@ -1,0 +1,165 @@
+.l-nav {
+    @include transition();
+    display: block;
+    width: 100%;
+    max-width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    &__main {
+        @include transition();
+        display: block;
+        padding: 40px 0;
+        .u-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__hamburguer {
+        display: none;
+    }
+    &__brand {
+        @include flexWidth(150px);
+        display: block;
+        a, img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__menu {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 2;
+        padding: 0 30px;
+        .c-smartMenu {
+            width: auto;
+            > ul > li > a {
+                @include transition();
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    &__ctas {
+        @include flexWidth(450px);
+        display: block;
+        .c-mainCTAs {
+            > li {
+                margin-right: 10px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &.is-middle {}
+    &.is-scrolled {
+        .l-nav__main {
+            padding: 20px 0;
+            background: $secondary;
+        }
+    }
+    &.is-hidden {
+        //top: -300px;
+    }
+}
+.l-navMobile {
+    @include u-hideElement;
+    @include transition();
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+
+    &__mask {
+        @include transition($duration: 150ms);
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.5);
+    }
+    &__content {
+        @include transition($delay: 50ms, $duration: 280ms);
+        @include scroll($bg: $white3, $bar: $gray2);
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 100vh;
+        background: $white;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        overflow: auto;
+        padding: 30px 30px 90px 30px;
+        &.--left {
+            left: -500px;
+        }
+        &.--right {
+            right: -500px;
+        }
+    }
+
+    &__close {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+
+    &.is-active {
+        @include u-showElement;
+        .l-navMobile__content {
+            @include opacity(1);
+            &.--left {
+                left: 0;
+            }
+            &.--right {
+                right: 0;
+            }
+        }
+    }
+}
+
+// hide menu and show hamburuger
+@media screen and (max-width: 1024px) {
+    .l-nav {
+        &__menu {
+            display: none;
+        }
+        &__hamburguer {
+            display: block;
+        }
+    }
+}
+
+// small devices
+@media screen and (max-width: 440px) {
+    .l-nav {
+        &__main {
+            padding: 25px 0;
+            .u-container {
+                padding: 0 15px;
+            }
+        }
+        &__brand {
+            @include flexWidth(100px)
+        }
+    }
+}

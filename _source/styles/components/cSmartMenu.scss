@@ -1,0 +1,632 @@
+// menu com sub menus
+$c_smartMenu_defaultPaddingLeft: 15px;
+.c-smartMenu {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+
+    // main itens
+    > ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        > li {
+            display: block;
+            position: relative;
+            margin-right: 25px;
+
+            > a {
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                white-space: nowrap;
+                font-family: $fontFamily__bebas;
+                font-size: 30px;
+            }
+            > a.js-smartMenu__toggle {
+                position: relative;
+                padding-right: 18px;
+                &:before {
+                    @include transition();
+                    content: '';
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -6px;
+                    background: white;
+                }
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &:hover {
+                > a.js-smartMenu__toggle {
+                    &:before {
+                        @include rotate(180deg, center);
+                    }
+                }
+            }
+        }
+    }
+
+    // all sub itens
+    > ul {
+        > li {
+            ul {
+                display: none;
+                li {
+                    display: block;
+                }
+                a {
+                    @include transition();
+                    display: block;
+                    padding: 10px $c_smartMenu_defaultPaddingLeft;
+                    font-weight: $fwBold;
+                    &.js-smartMenu__toggle {
+                        font-weight: $fwBold;
+                        position: relative;
+                        padding-right: 30px;
+                        &:before {
+                            @include transition();
+                            content: '';
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            top: 50%;
+                            right: 15px;
+                            margin-top: -6px;
+                            background: red;
+                        }
+                    }
+                    &.is-active {
+                        &:before {
+                            @include rotate(180deg, center);
+                        }
+                    }
+                }
+                &.is-active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // first sub menu
+    > ul {
+        > li {
+            > ul {
+                @include transition();
+                @include roundedAll(10px);
+                @include translate(0%, -50%, center);
+                //display: block;
+                overflow-y: auto;
+                max-height: 80vh;
+                width: 200px;
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    // --onlyClick
+    &.--click {
+        > ul {
+            > li {
+                > a {
+                    &.js-smartMenu__toggle {
+                        &:before {
+                            @include rotate(0, center);
+                        }
+                        &.is-active {
+                            &:before {
+                                @include rotate(180deg, center);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // themes
+    &.--white {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $white;
+                    &.js-smartMenu__toggle {
+                        &:before {
+                            background: url(#{$media_assets}caret_white_down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        // first sub menu
+        > ul {
+            > li {
+                > ul {
+                    background: $white;
+                }
+            }
+        }
+        // all sub itens
+        > ul {
+            > li {
+                ul {
+                    a {
+                        color: $black2;
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_assets}caret_black_down.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                        &:hover {
+                            background: $primary;
+                        }
+                    }
+                }
+            }
+        }
+        // bg colors
+        > ul {
+            > li {
+                > ul {
+                    > li {
+                        > ul {
+                            background: $white2;
+                            > li {
+                                > a {
+                                    padding-left: $c_smartMenu_defaultPaddingLeft + 10px;
+                                }
+                                > ul {
+                                    background: $white3;
+                                    > li {
+                                        > a {
+                                            padding-left: $c_smartMenu_defaultPaddingLeft + 15px;
+                                        }
+                                        > ul {
+                                            background: $gray1;
+                                            > li {
+                                                > a {
+                                                    padding-left: $c_smartMenu_defaultPaddingLeft + 20px;
+                                                }
+                                                > ul {
+                                                    background: $gray2;
+                                                    > li {
+                                                        > a {
+                                                            padding-left: $c_smartMenu_defaultPaddingLeft + 25px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.--secondary {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $secondary;
+                    &.js-smartMenu__toggle {
+                        &:before {
+                            background: url(#{$media_assets}caret_secondary_down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        // first sub menu
+        > ul {
+            > li {
+                > ul {
+                    background: $secondaryLight;
+                }
+            }
+        }
+        // all sub itens
+        > ul {
+            > li {
+                ul {
+                    a {
+                        color: $white;
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_assets}caret_white_down.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                        &:hover {
+                            background: $primary;
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+        // bg colors
+        > ul {
+            > li {
+                > ul {
+                    > li {
+                        > ul {
+                            background: $secondaryLight;
+                            > li {
+                                > a {
+                                    padding-left: $c_smartMenu_defaultPaddingLeft + 10px;
+                                }
+                                > ul {
+                                    background: $secondary;
+                                    > li {
+                                        > a {
+                                            padding-left: $c_smartMenu_defaultPaddingLeft + 15px;
+                                        }
+                                        > ul {
+                                            background: $secondaryLight;
+                                            > li {
+                                                > a {
+                                                    padding-left: $c_smartMenu_defaultPaddingLeft + 20px;
+                                                }
+                                                > ul {
+                                                    background: $secondary;
+                                                    > li {
+                                                        > a {
+                                                            padding-left: $c_smartMenu_defaultPaddingLeft + 25px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.--primary {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $primary;
+                    &.js-smartMenu__toggle {
+                        &:before {
+                            background: url(#{$media_assets}caret_primary_down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        // first sub menu
+        > ul {
+            > li {
+                > ul {
+                    background: $primary;
+                }
+            }
+        }
+        // all sub itens
+        > ul {
+            > li {
+                ul {
+                    a {
+                        color: $black;
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_assets}caret_white_down.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                        &:hover {
+                            background: $primaryDark;
+                        }
+                    }
+                }
+            }
+        }
+        // bg colors
+        > ul {
+            > li {
+                > ul {
+                    > li {
+                        > ul {
+                            background: $primaryLight;
+                            > li {
+                                > a {
+                                    padding-left: $c_smartMenu_defaultPaddingLeft + 10px;
+                                }
+                                > ul {
+                                    background: $primary;
+                                    > li {
+                                        > a {
+                                            padding-left: $c_smartMenu_defaultPaddingLeft + 15px;
+                                        }
+                                        > ul {
+                                            background: $primaryLight;
+                                            > li {
+                                                > a {
+                                                    padding-left: $c_smartMenu_defaultPaddingLeft + 20px;
+                                                }
+                                                > ul {
+                                                    background: $primary;
+                                                    > li {
+                                                        > a {
+                                                            padding-left: $c_smartMenu_defaultPaddingLeft + 25px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.--gray {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $text;
+                    &.js-smartMenu__toggle {
+                        &:before {
+                            background: url(#{$media_assets}caret_black_down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        // first sub menu
+        > ul {
+            > li {
+                > ul {
+                    background: $gray6;
+                }
+            }
+        }
+        // all sub itens
+        > ul {
+            > li {
+                ul {
+                    a {
+                        color: $white;
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_assets}caret_white_down.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                        &:hover {
+                            background: $black2;
+                        }
+                    }
+                }
+            }
+        }
+        // bg colors
+        > ul {
+            > li {
+                > ul {
+                    > li {
+                        > ul {
+                            background: $gray5;
+                            > li {
+                                > a {
+                                    padding-left: $c_smartMenu_defaultPaddingLeft + 10px;
+                                }
+                                > ul {
+                                    background: $gray6;
+                                    > li {
+                                        > a {
+                                            padding-left: $c_smartMenu_defaultPaddingLeft + 15px;
+                                        }
+                                        > ul {
+                                            background: $gray5;
+                                            > li {
+                                                > a {
+                                                    padding-left: $c_smartMenu_defaultPaddingLeft + 20px;
+                                                }
+                                                > ul {
+                                                    background: $gray6;
+                                                    > li {
+                                                        > a {
+                                                            padding-left: $c_smartMenu_defaultPaddingLeft + 25px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // theme - force caret color
+    &.--forceMainCaretWhite {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    &.js-smartMenu__toggle {
+                        &:before {
+                            background: url(#{$media_assets}caret_white_down.svg) !important;
+                            background-repeat: no-repeat !important;
+                            background-position: center !important;
+                            background-size: contain !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.--forceMainCaretDark {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    &.js-smartMenu__toggle {
+                        &:before {
+                            background: url(#{$media_assets}caret_black_down.svg) !important;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.--forceAllCaretsWhite {
+        @extend .--forceMainCaretWhite;
+        // all sub itens
+        > ul {
+            > li {
+                ul {
+                    a {
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_assets}caret_white_down.svg) !important;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.--forceAllCaretsDark {
+        @extend .--forceAllCaretsDark;
+        // all sub itens
+        > ul {
+            > li {
+                ul {
+                    a {
+                        &.js-smartMenu__toggle {
+                            &:before {
+                                background: url(#{$media_assets}caret_black_down.svg) !important;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // theme - force main link color
+    &.--forceMainLinkColorWhite {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $white;
+                }
+            }
+        }
+    }
+    &.--forceMainLinkColorGray {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $text;
+                }
+            }
+        }
+    }
+    &.--forceMainLinkColorPrimary {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    &.--forceMainLinkColorSecondary {
+        // main itens
+        > ul {
+            > li {
+                > a {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+
+    // layout - vertical
+    &.--vertical {
+        > ul {
+            display: block;
+            > li {
+                margin-right: 0;
+                > ul {
+                    @include translate(0,0,center);
+                    @include roundedAll(0);
+                    width: 100%;
+                    position: relative;
+                    left: 0;
+                    max-height: inherit;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.l-footer {
+    @include bg(assets, 'bg_dark.jpg', no-repeat, cover, fixed, center);
+    display: block;
+    width: 100%;
+    &__hero {
+        padding: 80px 0;
+        position: relative;
+        .u-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__menu {
+        @include flexWidth(50%);
+        padding-right: 50px;
+    }
+    &__ctas {
+        @include flexWidth(50%);
+        padding-left: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        .c-mainCTAs {
+            max-width: 480px;
+            min-width: 450px;
+        }
+    }
+    &__brand {
+        @include flexWidth(80px);
+        position: absolute;
+        left: 50%;
+        margin-left: -40px;
+    }
+    &__copyright {
+
+    }
+}
