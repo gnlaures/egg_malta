@@ -20,6 +20,15 @@
             position: absolute;
             top: -4px;
         }
+        .authorAndDate {
+            @include paragrafos($fs: 12px, $tc: $gray5);
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            strong {
+                font-size: 12px;
+            }
+        }
         h3 {
             @include default__title($fs: 34px, $tc: $secondary);
             @include transition();

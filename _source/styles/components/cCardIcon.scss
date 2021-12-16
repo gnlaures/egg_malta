@@ -1,0 +1,41 @@
+$cCardIcon__iconSize: 84px;
+
+.c-cardIcon {
+    @include roundedAll();
+    @include transition();
+    @include default__shadow;
+    background: $white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    &__icon {
+        display: block;
+        width: $cCardIcon__iconSize;
+        height: $cCardIcon__iconSize;
+        margin: 0 auto;
+        img, svg {
+            display: block;
+            width: $cCardIcon__iconSize;
+            height: $cCardIcon__iconSize;
+            object-fit: contain;
+        }
+    }
+    &__caption {
+        @include flexWidth(100%);
+        margin-top: 25px;
+        > h3 {
+            @include textUppercase;
+            text-align: center;
+            margin: 15px 0 10px 0;
+        }
+        > p {
+            @include paragrafos($fw: $fwBold, $fs: 24px, $tc: $black);
+            font-family: $fontFamily__osc;
+            text-align: center;
+        }
+    }
+}
+

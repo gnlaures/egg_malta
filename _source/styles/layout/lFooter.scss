@@ -48,4 +48,13 @@
             @include paragrafos($fs: 14px, $tc: $gray4);
         }
     }
+
+    .c-smartMenu {
+        .u-dnone {
+            display: block !important;
+        }
+        .js-smartMenu__li {
+            display: none !important;
+        }
+    }
 }

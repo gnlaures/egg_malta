@@ -65,36 +65,3 @@
         }
     }
 }
-.c-cardIcon {
-    @include transition();
-    @include roundedAll();
-    padding: 25px 20px;
-    border: 1px solid $gray2;
-    &__content {
-        display: block;
-        width: 100%;
-    }
-    i {
-        width: 60px;
-        height: 60px;
-        display: block;
-        margin: 0 auto;
-        svg {
-            path {
-                fill: $secondary;
-            }
-        }
-    }
-    h3 {
-        @include textUppercase;
-        text-align: center;
-        margin: 15px 0 10px 0;
-    }
-    p {
-        @include paragrafos();
-        text-align: center;
-    }
-    &:hover {
-        background: $white;
-    }
-}

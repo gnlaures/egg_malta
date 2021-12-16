@@ -21,7 +21,6 @@ include('parts/layout/l-headerInner.php');
                     <?php
                         $cSocialList = array('extraClass' => '--primary --rounded');
                         include('parts/components/c-socialList.php');
-
                         include('parts/components/c-contactInfos.php');
                         include('parts/components/c-contactMap.php');
                     ?>
@@ -30,4 +29,5 @@ include('parts/layout/l-headerInner.php');
         </div>
     </section>
 </main>
+<?php include("parts/sections/s-clients.php");?>
 

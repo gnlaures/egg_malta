@@ -1,0 +1,22 @@
+.s-needHelp {
+    display: block;
+    padding: 60px;
+    @include bg(assets, 'bg_dark.jpg', no-repeat, cover, inherit, bottom);
+    .u-container {
+        max-width: 600px;
+    }
+    h2, p {
+        text-align: center;
+    }
+    p {
+        @include paragrafos($tc: $white);
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        @include default__title($fs: 44px);
+    }
+    .c-btn {
+        margin: 0 auto;
+    }
+}

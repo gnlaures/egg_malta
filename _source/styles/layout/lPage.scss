@@ -1,15 +1,30 @@
 .l-page {
     @include default__shadow;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: block;
     background: $white2;
 }
 
 .l-page.--about {
+    background: $white;
     .s-aboutUs {
         &:first-of-type {
             padding-top: 120px;
+        }
+    }
+    .s-certificatesAndNumbers {
+        padding-top: 40px;
+        &:before {
+            height: 300px;
+        }
+    }
+}
+
+.l-page.--services {
+    .s-services {
+        .s-defaultSection__head {
+            display: none;
         }
     }
 }

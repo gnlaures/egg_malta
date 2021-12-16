@@ -12,7 +12,7 @@
             <div class="l-nav__ctas">
                 <ul class="c-mainCTAs">
                     <li><a href="#" class="c-btn --primary --stroke --icon">(48)99999.9999</a></li>
-                    <li><a href="#" class="c-btn --primary">Conheça os serviços</a></li>
+                    <li><a href="servicos" class="c-btn --primary">Conheça os serviços</a></li>
                 </ul>
             </div>
             <div class="l-nav__hamburguer">

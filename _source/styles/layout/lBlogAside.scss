@@ -1,0 +1,8 @@
+.l-blogAside {
+    &__widget {
+        margin-bottom: 60px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

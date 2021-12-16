@@ -12,8 +12,11 @@
         h3 {
             @include default__title($fs: 50px, $tc: $secondary);
             max-width: 420px;
+        }
+        h2, h3 {
             &.u-ta-c {
-                margin: 0 auto;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         &.--withLink {
@@ -28,7 +31,7 @@
     &__content {
         display: block;
         width: 100%;
-        p {
+        > * > p, > p {
             @include paragrafos();
         }
     }

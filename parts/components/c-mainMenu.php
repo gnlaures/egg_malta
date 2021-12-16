@@ -1,5 +1,6 @@
 <div class="c-smartMenu <?php echo $cMainMenu["extraClass"] ?>">
     <ul>
+        <li class="u-dnone"><a href="servicos">Serviços</a></li>
         <li>
             <a>Serviços</a>
             <ul>

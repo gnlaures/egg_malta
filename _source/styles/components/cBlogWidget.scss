@@ -1,0 +1,59 @@
+.c-blogWidget {
+    &__head {
+        margin-bottom: 20px;
+        h3 {
+            @include default__title($fs: 32px, $tc: $secondary);
+        }
+        hr {
+            @include default__spacer();
+            margin-top: 10px;
+        }
+    }
+
+    &.--primary {
+        @include default__shadow;
+        @include roundedAll(15px);
+        padding: 30px;
+        background: $primary;
+        .c-blogWidget__head {
+            hr {
+                background: $secondary;
+            }
+        }
+    }
+    &.--secondary {
+        @include default__shadow;
+        @include roundedAll(15px);
+        padding: 30px;
+        background: $secondary;
+        .c-blogWidget__head {
+            h3 {
+                color: $primary;
+            }
+            hr {
+                background: $primary;
+            }
+        }
+    }
+
+    &.--populares {
+        .c-blogWidget__content > ul > li {
+            margin-bottom: 20px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        .c-cardBlogResume__content {
+            h3 {
+                font-size: 28px;
+            }
+            .authorAndDate {
+                display: none;
+            }
+        }
+    }
+
+    .c-smartMenu.--vertical>ul>li>ul {
+        @include roundedAll(10px);
+    }
+}

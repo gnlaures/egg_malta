@@ -27,15 +27,23 @@
 @import "components/cCardService.scss";
 @import "components/cCardBlogResume.scss";
 @import "components/cCardRequireContact.scss";
+@import "components/cCardIcon.scss";
+@import "components/cCardNumber.scss";
 @import "components/cMainCtas.scss";
 @import "components/cfeaturedPicture.scss";
 @import "components/cLinkReadMore.scss";
 @import "components/cContactInfos.scss";
 @import "components/cContactMap.scss";
+@import "components/cBlogWidget.scss";
+
+@import "components/cSwiperCompanyNumbers.scss";
+@import "components/cSwiperCertificates.scss";
+@import "components/cSwiperClients.scss";
 
 // sections
 @import "sections/s404.scss";
 @import "sections/sDefaultSection.scss";
+@import "sections/sDefaultAsideSection.scss";
 @import "sections/sOnlyText.scss";
 @import "sections/sServices.scss";
 @import "sections/sFeaturededBlogPosts.scss";
@@ -43,6 +51,9 @@
 @import "sections/sClients.scss";
 @import "sections/sRequireContact.scss";
 @import "sections/sContact.scss";
+@import "sections/sCertificatesAndNumbers.scss";
+@import "sections/sBlogPosts.scss";
+@import "sections/sNeedHelp.scss";
 
 // layouts
 @import "layout/lPage";
@@ -50,6 +61,7 @@
 @import "layout/lHeaderHome";
 @import "layout/lHeaderInner";
 @import "layout/lFooter";
+@import "layout/lBlogAside";
 
 // boilerplate page
 @import "components/cBoilerCode.scss";

@@ -1,0 +1,28 @@
+.c-cardNumber {
+    @include roundedAll(10px);
+    @include transition();
+    @include default__shadow;
+    background: $primary;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    &__number {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+        line-height: 1;
+        white-space: nowrap;
+        color: $secondary;
+        font-family: $fontFamily__bebas;
+        position: relative;
+        top: -20px;
+    }
+    &__caption {
+        @include paragrafos($fw: $fwBold, $fs: 24px, $tc: $black);
+        font-family: $fontFamily__osc;
+        text-align: center;
+        position: relative;
+        top: -5px;
+    }
+}

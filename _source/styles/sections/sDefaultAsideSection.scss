@@ -1,0 +1,17 @@
+.s-defaultAsideSection {
+    display: block;
+    padding: 80px 0;
+    .u-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__content {
+        flex: 1 1 auto;
+        padding-right: 60px;
+    }
+    &__aside {
+        @include flexWidth(400px);
+    }
+}

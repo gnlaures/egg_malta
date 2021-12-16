@@ -11,6 +11,9 @@
         .c-contactForm {
             margin-top: 30px;
         }
+        p {
+            @include paragrafos();
+        }
     }
     &__infos {
         @include flexWidth(370px);

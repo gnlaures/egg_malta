@@ -2,7 +2,7 @@
     @include bg(assets, 'bg_dark.jpg', no-repeat, cover, inherit, bottom);
     display: block;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height: 500px;
     &__bg,
     &__content {
@@ -39,5 +39,18 @@
     p {
         @include paragrafos($tc: $white, $fs: 22px);
         text-align: center;
+    }
+
+    &.--blogArticle {
+        min-height: 500px;
+        height: auto;
+        .u-container {
+            max-width: 940px;
+        }
+        .l-headerInner__content {
+            position: relative;
+            padding-top: 225px;
+            padding-bottom: 60px;
+        }
     }
 }

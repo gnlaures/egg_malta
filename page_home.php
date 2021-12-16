@@ -30,6 +30,7 @@
     </section>
     <?php include("parts/sections/s-featuredBlogPosts.php");?>
 </main>
+<?php include("parts/sections/s-clients.php");?>
 
 
 

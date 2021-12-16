@@ -1,6 +1,8 @@
 .s-aboutUs {
     padding-top: 60px;
     padding-bottom: 80px;
+    position: relative;
+    z-index: 2;
     .u-container {
         display: flex;
         flex-direction: row;
@@ -19,6 +21,7 @@
             margin-bottom: 25px;
         }
         p {
+            @include paragrafos();
             margin-bottom: 25px;
         }
     }
