@@ -1,0 +1,132 @@
+.c-textFormat {
+    p {
+        @include opacity(0.75);
+        @include paragrafos();
+        a {
+            color: $primary;
+            &:hover {
+                text-decoration: underline;
+                color: $primaryDark;
+            }
+        }
+        strong, b {
+            font-weight: $fwBold;
+        }
+        i {
+            font-style: italic;
+        }
+        u {
+            text-decoration: underline;
+        }
+        &.--observation {
+            @include opacity(0.4);
+        }
+    }
+    h1, h1 span, h1 strong,
+    h2, h2 span, h2 strong,
+    h3, h3 span, h3 strong,
+    h4, h4 span, h4 strong,
+    h5, h5 span, h5 strong,
+    h6, h6 span, h6 strong {
+        display: block;
+        width: 100%;
+        color: $secondary;
+        font-family: $fontFamily__osc;
+        font-weight: $fwBold;
+        margin: 10px 0;
+        line-height: 1;
+        * {
+            display: inline !important;
+        }
+    }
+    h1, h1 span, h1 strong, {
+        font-size: 72px;
+        line-height: 0.8;
+    }
+    h2, h2 span, h2 strong, {
+        font-size: 52px;
+    }
+    h3, h3 span, h3 strong, {
+        font-size: 40px;
+    }
+    h4, h4 span, h4 strong, {
+        font-size: 32px;
+    }
+    h5, h5 span, h5 strong, {
+        font-size: 26px;
+    }
+    h6, h6 span, h6 strong  {
+        font-size: 22px;
+    }
+    figure, figure img, figure a {
+        @include roundedAll();
+        display: block;
+        width: 100%;
+    }
+    figcaption {
+        @include paragrafos($fs: 16px);
+        text-align: center;
+    }
+    ul, ol {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        li {
+            color: $primary;
+            margin-bottom: 10px;
+            display: list-item;
+            list-style-position: inside;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            > p {
+                display: inline-block;
+            }
+            > a {
+                @include opacity(0.4);
+                @include paragrafos($tc: $primary);
+                display: inline-block;
+                &:hover {
+                    text-decoration: underline;
+                    color: $primaryDark;
+                }
+            }
+        }
+    }
+    ul {
+        li {
+            list-style-type: disc;
+        }
+    }
+    ol {
+        li {
+            list-style-type: decimal-leading-zero;
+        }
+    }
+    blockquote {
+        @include roundedAll();
+        @include default__shadow;
+        background: $white;
+        display: block;
+        padding: 30px;
+        color: $text;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: $fwLight;
+        line-height: 1.4;
+        margin: 10px 0;
+    }
+    iframe, embed, object, canvas {
+        display: block;
+        width: 100%;
+    }
+    footer {
+        border-top: 1px solid $gray2;
+        background: $white3;
+        padding: 40px;
+        margin-top: 40px;
+        .authorAndDate {
+            @include paragrafos();
+        }
+    }
+}

@@ -55,5 +55,9 @@
 
     .c-smartMenu.--vertical>ul>li>ul {
         @include roundedAll(10px);
+        &.is-active {
+            margin-bottom: 15px;
+        }
+
     }
 }

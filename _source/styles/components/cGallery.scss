@@ -1,0 +1,28 @@
+.c-gallery {
+    @include calcWidthForPositionNegative(-4px);
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    li {
+        padding: 4px !important;
+        list-style-type: none !important;
+        margin: 0 !important;
+    }
+    a {
+        opacity: 1 !important;
+        @include transition();
+        @include roundedAll(10px);
+        display: block !important;
+        width: 100% !important;
+        overflow: hidden;
+        img {
+            @include transition();
+        }
+        &:hover {
+            img {
+                @include scale(1.05, center);
+            }
+        }
+    }
+}
