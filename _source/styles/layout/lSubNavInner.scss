@@ -1,0 +1,29 @@
+.l-subNavInner {
+    display: block;
+    background: $primary;
+    padding: 20px;
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        li {
+            margin-right: 5px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        a {
+            @include roundedAll(50px);
+            @include transition();
+            font-family: $fontFamily__osc;
+            font-size: 20px;
+            color: $black;
+            font-weight: $fwBold;
+            padding: 10px 20px;
+            &:hover {
+                background: $primaryDark;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.s-service {
+    .s-defaultSection__head {
+        margin-bottom: 30px;
+        h2 {
+            font-size: 50px;
+        }
+    }
+    .s-defaultSection__content {
+        p {
+            @include paragrafos();
+            margin-bottom: 25px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.--intro {
+        .u-container {
+            max-width: 1080px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    &.--list {
+        padding-top: 0;
+        .c-responsiveGrid {
+            @include calcWidthForPositionNegative(-10px);
+            > li {
+                padding: 10px;
+            }
+        }
+    }
+    &.--faq {
+        padding-top: 0;
+        .c-responsiveGrid {
+            @include calcWidthForPositionNegative(-5px);
+            li {
+                padding: 5px;
+            }
+        }
+        .c-toggleList {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.c-cardServiceDetails {
+    @include roundedAll();
+    @include transition();
+    @include default__shadow;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &__icon {
+        @include flexWidth(55px);
+        * {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__content {
+        h4 {
+            @include default__title($fs: 28px, $tc: $secondary);
+            margin-bottom: 10px;
+        }
+        p {
+            @include paragrafos();
+        }
+    }
+}

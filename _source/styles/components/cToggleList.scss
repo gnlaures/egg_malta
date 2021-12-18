@@ -1,4 +1,6 @@
 .c-toggleList {
+    @include roundedAll();
+    @include default__shadow;
     margin-bottom: 10px;
     &:last-of-type {
         margin-bottom: 0;
@@ -6,7 +8,7 @@
     &__header {
         @include transition();
         @include roundedAll();
-        padding: 10px 20px;
+        padding: 15px 20px;
         padding-right: 45px;
         display: block;
         position: relative;
@@ -53,6 +55,7 @@
             @include u-showElement;
             overflow: auto;
             padding: 20px;
+            padding-top: 0;
             max-height: inherit;
         }
     }
@@ -164,6 +167,7 @@
             border-left: 2px solid $white;
             border-right: 2px solid $white;
             border-bottom: 2px solid $white;
+            background: $white;
         }
         &.is-active {
             .c-toggleList__header {

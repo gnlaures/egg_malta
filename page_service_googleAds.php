@@ -38,7 +38,10 @@
         </div>
         <div class="s-defaultSection__content">
             <div class="u-container">
-                <ul class="c-responsiveGrid">
+                <ul class="c-responsiveGrid --center"
+                    data-maxw-breaks="980, 400"
+                    data-maxw-cols="2, 1"
+                    data-cols-init="3">
                     <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
                     <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
                     <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
@@ -103,6 +106,43 @@
                 </div>
             </div>
         </div>
+        <div class="s-plans__form">
+            <div class="c-formContract">
+                <form action="#" class="c-form" id="formContract">
+                    <ul class="c-form__fieldsHero --pad10">
+                        <li class="c-form__field u-fw50">
+                            <label for="formContract_nome">Nome</label>
+                            <input id="formContract_nome" type="text" name="nome" class="field" required>
+                        </li>
+                        <li class="c-form__field u-fw50">
+                            <label for="formContract_email">E-mail</label>
+                            <input id="formContract_email" type="email" name="email" class="field" required>
+                        </li>
+                        <li class="c-form__field u-fw50">
+                            <label for="formContract_telefone">Telefone</label>
+                            <input id="formContract_telefone" type="tel" class="field foneMask" name="telefone" placeholder="(__) ____-_____" required>
+                        </li>
+                        <li class="c-form__field u-fw50">
+                            cnpj
+                        </li>
+                        <li class="c-form__field u-fw50">
+                            empresa
+                        </li>
+                        <li class="c-form__field u-fw50">
+                            servicos
+                        </li>
+                        <li class="c-form__field u-fw100">
+                            <label for="formContract_mensagem">Mensagem</label>
+                            <textarea id="formContract_mensagem" name="mensagem" class="field" required></textarea>
+                        </li>
+                        <li class="c-form__field u-fw100 --btn">
+                            <button class="c-btn --primary">Contratar Serviços</button>
+                        </li>
+                    </ul>
+                </form>
+
+            </div>
+        </div>
     </section>
     <section class="s-defaultSection s-service --faq" id="perguntas-frequentes">
         <div class="s-defaultSection__head">
@@ -112,7 +152,10 @@
         </div>
         <div class="s-defaultSection__content">
             <div class="u-container">
-                <ul class="c-responsiveGrid">
+                <ul class="c-responsiveGrid --center"
+                    data-maxw-breaks="980"
+                    data-maxw-cols="1"
+                    data-cols-init="2">
                     <li>
                         <div class="c-toggleList --white">
                             <div class="c-toggleList__header">
