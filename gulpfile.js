@@ -44,6 +44,7 @@ function gulpJS() {
             '_source/scripts/layout/lNav.js',
             '_source/scripts/layout/lHeaderHome.js',
             '_source/scripts/sections/sDefaultGridSlider.js',
+            '_source/scripts/components/cTabPlans.js'
         ])
         .pipe(concat('scripts-min.js'))
         .pipe(

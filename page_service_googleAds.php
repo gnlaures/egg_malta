@@ -64,9 +64,9 @@
                 <div class="s-plans__grid">
                     <div class="c-tabPlans">
                         <ul class="c-tabPlans__tab">
-                            <li><a href="#">6 meses</a></li>
-                            <li><a href="#">9 meses</a></li>
-                            <li><a href="#">Mensal</a></li>
+                            <li><a href="#6meses" class="is-active">6 meses</a></li>
+                            <li><a href="#9meses">9 meses</a></li>
+                            <li><a href="#mensal">Mensal</a></li>
                         </ul>
                         <div class="c-tabPlans__swiper">
                             <div class="swiper-wrapper">
@@ -98,15 +98,15 @@
                 <div class="s-plans__support">
                     <a href="#" class="c-whatsappCall">
                         <h4>Precisa de Ajuda?</h4>
-                        <div class="u-iconWithCaption">
-                            <i>icon</i>
-                            <span class="caption"></span>
+                        <div>
+                            <i><img src="media/img/icons/social/social_whatsapp.svg" alt="Whatsapp"></i>
+                            <span class="caption">48 99999.9999</span>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="s-plans__form">
+        <div class="u-dnone s-plans__form">
             <div class="c-formContract">
                 <form action="#" class="c-form" id="formContract">
                     <ul class="c-form__fieldsHero --pad10">

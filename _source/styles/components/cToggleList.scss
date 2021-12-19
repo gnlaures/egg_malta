@@ -2,6 +2,7 @@
     @include roundedAll();
     @include default__shadow;
     margin-bottom: 10px;
+    position: relative;
     &:last-of-type {
         margin-bottom: 0;
     }
@@ -13,23 +14,28 @@
         display: block;
         position: relative;
         cursor: pointer;
+        span {
+            display: block;
+            color: $text;
+            font-weight: $fwSemiBold;
+        }
         > * {
             @include transition();
         }
         &:after {
             @include transition();
-            @include transforms(translateY(-50%), center);
-            content: '';
+            @include transforms(translateY(-23px), center);
+            font-family: $fontFamily__bebas;
+            content: '+';
             display: block;
-            width: 14px;
-            height: 14px;
+            width: 20px;
+            height: 40px;
             position: absolute;
             right: 20px;
             top: 50%;
-            background: url(#{$media_assets}caret-down-white.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
+            font-size: 40px;
+            color: $primary;
+            font-weight: $fwBold;
         }
     }
     &__content {
@@ -44,11 +50,13 @@
     }
 
     &.is-active {
+        z-index: 1;
         .c-toggleList__header {
             @include rounded(bottom, left, 0);
             @include rounded(bottom, right, 0);
             &:after {
                 @include transforms(translateY(-50%) rotate(180deg), center);
+                content: '-';
             }
         }
         .c-toggleList__content {
@@ -58,6 +66,9 @@
             padding-top: 0;
             max-height: inherit;
         }
+    }
+    &:hover {
+        z-index: 2;
     }
 
     &.--primary {
@@ -150,17 +161,15 @@
     &.--white {
         .c-toggleList__header {
             background: $white;
-            &:hover {
-                background: $white3;
-            }
             > * {
                 color: $text;
             }
-            &:after {
-                background: url(#{$media_assets}caret-down.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
+            &:hover {
+                background: $primary;
+                &:after,
+                > * {
+                    color: $black;
+                }
             }
         }
         .c-toggleList__content {

@@ -1,0 +1,207 @@
+.s-plans {
+    background: $primary;
+    .s-defaultSection__head {
+        margin-bottom: 40px;
+        .u-container {
+            max-width: 720px;
+        }
+        h2 {
+            font-size: 50px;
+        }
+        p {
+            @include paragrafos($tc: $black);
+            text-align: center;
+            margin-top: 15px;
+        }
+    }
+    .s-defaultSection__content {
+        .u-container {
+            max-width: 1240px;
+        }
+    }
+    &__support {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.c-tabPlans {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__tab {
+        @include roundedAll(30px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        padding: 2px;
+        background: $primaryLight;
+        li {
+
+        }
+        a {
+            @include roundedAll(30px);
+            @include transition();
+            background: $primaryLight;
+            display: block;
+            height: 56px;
+            line-height: 56px;
+            white-space: nowrap;
+            font-family: $fontFamily__osc;
+            font-weight: $fwBold;
+            color: $black;
+            font-size: 20px;
+            padding: 0 20px;
+            &:hover {
+                background: $primary;
+            }
+            &.is-active {
+                background: $secondary;
+                color: $primary;
+            }
+        }
+    }
+    &__swiper {
+        @include flexWidth(100%);
+        margin-top: 40px;
+        .swiper-slide {
+            @include transition();
+            @include opacity(0);
+            pointer-events: none;
+            &.swiper-slide-active {
+                pointer-events: all;
+                @include opacity(1);
+            }
+        }
+    }
+
+    &__list {
+        @include calcWidthForPositionNegative(-10px);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        > li {
+            @include flexWidth(33.3%);
+            padding: 10px;
+        }
+    }
+}
+
+.c-cardPlan {
+    @include transition();
+    @include default__shadow;
+    @include roundedAll();
+    padding: 35px;
+    background: $white;
+    &__title {
+        h3 {
+            @include default__title($fs: 36px, $tc: $secondary);
+        }
+        hr {
+            @include default__spacer();
+            margin-top: 10px;
+        }
+    }
+    &__price {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 30px 0;
+        .price__hero {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            span {
+                position: relative;
+                line-height: 1;;
+            }
+        }
+        .b, .p, .z {
+            font-family: $fontFamily__bebas;
+            color: $primary;
+        }
+        .b, .z {
+            font-size: 36px;
+        }
+        .p {
+            font-size: 72px;
+            padding: 0 4px;
+        }
+        .b {
+            top: 7px;
+        }
+        .z {
+            top: 30px;
+        }
+        .m {
+            @include paragrafos($fs: 18px);
+            @include flexWidth(100%);
+            text-align: right;
+            display: block;
+            position: absolute !important;
+            bottom: -10px;
+        }
+    }
+    &__caption {
+        p {
+            @include paragrafos($fs: 22px);
+            text-align: center;
+        }
+    }
+    &__footer {
+        padding-top: 30px;
+        .c-btn {
+            @include flexWidth(100%);
+        }
+        > span {
+            @include paragrafos($fs: 14px);
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}
+
+.c-whatsappCall {
+    display: block;
+    h4 {
+        color: $black;
+        font-family: $fontFamily__bebas;
+        font-size: 24px;
+        line-height: 1;
+    }
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        i {
+            @include flexWidth(30px);
+            position: relative;
+            top: 2px;
+            * {
+                display: block;
+                width: 100%;
+            }
+        }
+        span {
+            padding-left: 6px;
+            color: $black;
+            font-family: $fontFamily__bebas;
+            font-size: 40px;
+            line-height: 1;
+        }
+    }
+}

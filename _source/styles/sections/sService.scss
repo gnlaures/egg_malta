@@ -32,7 +32,6 @@
         }
     }
     &.--faq {
-        padding-top: 0;
         .c-responsiveGrid {
             @include calcWidthForPositionNegative(-5px);
             li {

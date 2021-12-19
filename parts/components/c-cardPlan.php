@@ -1,11 +1,14 @@
 <div class="c-cardPlan">
-    <div class="c-cardPlan__title">Plano Silver</div>
+    <div class="c-cardPlan__title">
+        <h3>Plano Silver</h3>
+        <hr>
+    </div>
     <div class="c-cardPlan__price">
         <div class="price__hero">
             <span class="b">R$</span>
             <span class="p">860</span>
             <span class="z">00</span>
-            <span class="m">mensal</span>
+            <span class="m">/mensal</span>
         </div>
     </div>
     <div class="c-cardPlan__caption">
