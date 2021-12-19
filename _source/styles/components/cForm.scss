@@ -239,6 +239,23 @@ $field_checks_size: 20px;
                 input {
                     @include roundedAll(4px);
                 }
+                label {
+                    font-family: $fontFamily__default;
+                }
+                .checkHero {
+                    &.u-dflex {
+                        align-items: flex-start;
+                        li {
+                            margin-right: 30px;
+                            margin-top: 0;
+                            margin-bottom: 10px;
+                            &:last-of-type {
+                                margin-top: 0;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
             }
             &.--radio {
                 input {

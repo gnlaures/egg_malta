@@ -1,4 +1,4 @@
-{
+
     // Identifica direcao do scroll
     function scrollDirection() {
         var scrollInit = 0;
@@ -65,4 +65,3 @@
     // Example;
     // $(window).on('scroll', function () {stickyPosition('.u-stickyElement', 0, get__navHeight());});
     // $(window).on('load', function () {stickyPosition('.u-stickyElement', 0, get__navHeight());});
-}

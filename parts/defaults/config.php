@@ -44,7 +44,7 @@
             $classOnBody = 'p-inner';
             break;
         case 'contratar' :
-            $file = 'page_buy.php';
+            $file = 'page_contract.php';
             $title_page = 'Contratar - '.$title;
             $classOnBody = 'p-inner';
             break;
@@ -58,18 +58,18 @@
             $title_page = 'Serviços - '.$title;
             $classOnBody = 'p-inner';
             break;
-        case 'facebook-ads' :
-            $file = 'page_service_googleAds.php';
+        case 'facebook-instagram-ads' :
+            $file = 'page_service_fbInstaAds.php';
             $title_page = 'Serviços - '.$title;
             $classOnBody = 'p-inner';
             break;
         case 'gestao-midias-sociais' :
-            $file = 'page_service_googleAds.php';
+            $file = 'page_service_socialMedia.php';
             $title_page = 'Serviços - '.$title;
             $classOnBody = 'p-inner';
             break;
         case 'marketing-digital' :
-            $file = 'page_service_googleAds.php';
+            $file = 'page_service_mktDigital.php';
             $title_page = 'Serviços - '.$title;
             $classOnBody = 'p-inner';
             break;

@@ -1,15 +1,14 @@
 <?php
-$lHeaderInner = array(
-    'extraClass' => '',
-    'h1' => 'Google Ads',
-    'bg' => 'media/img/content/bg_headerInner_contact.jpg',
-    'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
-include('parts/layout/l-headerInner.php');
+    $lHeaderInner = array(
+        'extraClass' => '',
+        'h1' => 'Gestão de mídias sociais',
+        'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
+    include('parts/layout/l-headerInner.php');
 ?>
 
 <main class="l-page --inner --service">
     <?php include('parts/layout/l-navSubInner.php');?>
-    <section class="s-defaultSection s-service --intro" id="o-que-e">
+    <section class="s-defaultSection s-service --intro" id="o-que">
         <div class="s-defaultSection__head">
             <div class="u-container">
                 <h2 class="u-ta-c">O que é</h2>

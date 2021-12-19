@@ -1,4 +1,4 @@
-<section class="s-defaultSection s-requireContact">
+<section class="s-defaultSection s-requireContact" id="solicitar-contato">
     <div class="s-defaultSection__content">
         <div class="u-container">
             <div class="s-requireContact__call">

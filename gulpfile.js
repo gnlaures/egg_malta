@@ -34,6 +34,7 @@ function gulpJS() {
     return gulp
         .src([
             '_source/scripts/partials/utilities.js',
+            '_source/scripts/partials/jsScrollLinks.js',
             '_source/scripts/components/cFavoriteToggle.js',
             '_source/scripts/components/cForm.js',
             '_source/scripts/components/cHamburguer.js',

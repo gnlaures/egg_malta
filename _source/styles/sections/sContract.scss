@@ -1,0 +1,10 @@
+.s-contract {
+    @include default__shadow;
+    background: $white;
+    .u-container {
+        max-width: 880px;
+    }
+    .c-form {
+        margin-top: 20px;
+    }
+}

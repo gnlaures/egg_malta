@@ -28,3 +28,11 @@
         }
     }
 }
+
+.l-page.--service {
+    .l-subNavInner {
+        position: sticky;
+        top: 108px;
+        z-index: 4;
+    }
+}

@@ -15,7 +15,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.</p>
     </div>
     <div class="c-cardPlan__footer">
-        <a href="#" class="c-btn --primary">Contratar</a>
+        <a href="contratar" class="c-btn --primary">Contratar</a>
         <span>* contrato mínimo de 6 meses</span>
     </div>
 </div>
