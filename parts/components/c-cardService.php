@@ -1,19 +1,20 @@
 <?php
-    $cCardService__url = '#';
-    $cCardService__icon = '#';
-    $cCardService__title = '#';
-    $cCardService__text = '#';
-    $cCardService__btnCaption = '#';
-?>
+//    $cCardService = array(
+//        'url' => '',
+//        'icon' => 'A Agência',
+//        'title' => 'Gestão de mídias sociais',
+//        'btnCaption' => 'A Agência',
+//        'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
+    ?>
 
-<a href="#" class="c-cardService">
-    <div class="c-cardService__icon">icon</div>
-    <div class="c-cardService__title"><h3>Gestão de Mídias Sociais</h3></div>
+<a href="<?php echo $cCardService["url"] ?>" class="c-cardService">
+    <div class="c-cardService__icon"><img src="<?php echo $cCardService["icon"] ?>" alt="Icon"></div>
+    <div class="c-cardService__title"><h3><?php echo $cCardService["title"] ?></h3></div>
     <hr>
     <div class="c-cardService__text">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.</p>
+        <p><?php echo $cCardService["text"] ?></p>
     </div>
     <div class="c-cardService__btn">
-        <span class="c-btn --primary">Saiba mais</span>
+        <span class="c-btn --primary"><?php echo $cCardService["btnCaption"] ?></span>
     </div>
 </a>

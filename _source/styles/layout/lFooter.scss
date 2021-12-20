@@ -26,6 +26,9 @@
         .c-mainCTAs {
             max-width: 480px;
             min-width: 450px;
+            >span {
+                display: none;
+            }
         }
     }
     &__brand {

@@ -82,9 +82,30 @@
             </div>
             <div class="c-blogWidget__content">
                 <ul>
-                    <li><?php include('parts/components/c-cardBlogResume.php');?></li>
-                    <li><?php include('parts/components/c-cardBlogResume.php');?></li>
-                    <li><?php include('parts/components/c-cardBlogResume.php');?></li>
+                    <li><?php $cCardBlogResume = array(
+                            'url' => 'bloginner',
+                            'img' => 'media/img/content/content_1.jpg',
+                            'title' => 'Preciso ter muito dinheiro para investir em Google Ads?',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet aperiam harum ipsa minus molestiae nesciunt',
+                            'author' => 'John Doe',
+                            'date' => '10/10/2021');
+                        include('parts/components/c-cardBlogResume.php'); ?></li>
+                    <li><?php $cCardBlogResume = array(
+                            'url' => 'bloginner',
+                            'img' => 'media/img/content/content_2.jpg',
+                            'title' => 'Preciso ter muito dinheiro para investir em Google Ads?',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet aperiam harum ipsa minus molestiae nesciunt',
+                            'author' => 'John Doe',
+                            'date' => '10/10/2021');
+                        include('parts/components/c-cardBlogResume.php'); ?></li>
+                    <li><?php $cCardBlogResume = array(
+                            'url' => 'bloginner',
+                            'img' => 'media/img/content/content_3.jpg',
+                            'title' => 'Preciso ter muito dinheiro para investir em Google Ads?',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet aperiam harum ipsa minus molestiae nesciunt',
+                            'author' => 'John Doe',
+                            'date' => '10/10/2021');
+                        include('parts/components/c-cardBlogResume.php'); ?></li>
                 </ul>
             </div>
         </div>

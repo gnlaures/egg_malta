@@ -13,10 +13,11 @@
         width: 40px;
         height: 40px;
         background: $primary;
-        svg {
+        svg, img {
             display: block;
-            width: 18px;
-            height: 18px;
+            width: 9px;
+            height: auto;
+            object-fit: contain;
         }
     }
     span {
@@ -30,13 +31,13 @@
     }
     &:hover {
         i {
-            background: $secondary;
+            background: $primaryDark;
             svg path {
                 stroke: $primary;
             }
         }
         span {
-            color: $secondary;
+            color: $primaryDark;
         }
     }
 }

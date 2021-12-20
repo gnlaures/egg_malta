@@ -99,4 +99,9 @@
     width: 40px;
     height: 40px;
     background: $primary;
+    cursor: pointer;
+    img {
+        display: block;
+        width: 15px;
+    }
 }

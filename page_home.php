@@ -11,7 +11,7 @@
                             <img src="media/img/assets/brand_symbol_yellow.png" alt="Malta Digital">
                         </span>
                         <span class="c-featuredPicture__icon --b">
-                            <img src="media/img/icons/icon_attach.svg" alt="Analytics">
+                            <img src="media/img/icons/icon_google.png" alt="Analytics">
                         </span>
                         <span class="c-featuredPicture__bgEffect"></span>
                         <figure class="c-featuredPicture__img">
@@ -23,7 +23,16 @@
                     <h2>Consectur adiscpling about text Malta</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed sagittis tortor. Ut tempor viverra purus, vel sodales enim feugiat quis. Vivamus vitae bibendum diam. Quisque varius et urna non ornare.</p>
                     <p>Vestibulum sem sapien, tempus ut placerat a, ornare quis ligula. Sed condimentum mi ac vulputate cursus. Sed metus dui, aliquet ac viverra eget, posue.</p>
-                    <?php include('parts/components/c-mainCTAs.php')?>
+                    <?php
+                    $cMainCTA = array(
+                        'url_1' => 'sobre',
+                        'class_1' => '--primary',
+                        'caption_1' => 'Saiba mais',
+                        'url_2' => '#solicitar-contato',
+                        'class_2' => '--primary --white js-scrollLink',
+                        'caption_2' => 'Solicite Contato');
+                    include('parts/components/c-mainCTAs.php');
+                    ?>
                 </div>
             </div>
         </div>

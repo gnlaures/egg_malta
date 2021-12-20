@@ -34,9 +34,14 @@
         display: block;
         width: 80px;
         height: 80px;
-        background: $gray1;
         margin-bottom: 20px;
         top: 0;
+        img {
+            display: block;
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
     }
     &__title {
         @include transition();

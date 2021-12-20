@@ -10,10 +10,16 @@
                 include('parts/components/c-brand.php'); ?>
             </div>
             <div class="l-footer__ctas">
-                <ul class="c-mainCTAs">
-                    <li><a href="#" class="c-btn --white --stroke --icon">(48)99999.9999</a></li>
-                    <li><a href="#" class="c-btn --primary">Conheça os serviços</a></li>
-                </ul>
+                <?php
+                $cMainCTA = array(
+                    'url_1' => '#',
+                    'class_1' => '--white --stroke',
+                    'caption_1' => '(48)99999.9999',
+                    'url_2' => '#servicos',
+                    'class_2' => '--primary',
+                    'caption_2' => 'Conheça os serviços');
+                include('parts/components/c-mainCTAs.php');
+                ?>
             </div>
         </div>
     </div>
