@@ -41,11 +41,14 @@ function gulpJS() {
             '_source/scripts/components/cResponsiveGrid.js',
             '_source/scripts/components/cSmartMenu.js',
             '_source/scripts/components/cToggleList.js',
-            '_source/scripts/components/cSwiperClients.js',
             '_source/scripts/layout/lNav.js',
             '_source/scripts/layout/lHeaderHome.js',
             '_source/scripts/sections/sDefaultGridSlider.js',
-            '_source/scripts/components/cTabPlans.js'
+            '_source/scripts/components/cTabPlans.js',
+            '_source/scripts/components/cSwiperClients.js',
+            '_source/scripts/components/cSwiperCompanyNumbers.js',
+            '_source/scripts/components/cSwiperCertificates.js',
+            '_source/scripts/components/cSwiperServicesCards.js'
         ])
         .pipe(concat('scripts-min.js'))
         .pipe(

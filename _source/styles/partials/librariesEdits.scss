@@ -99,6 +99,9 @@
 		display: block;
 		width: 10px;
 	}
+	&.swiper-button-disabled {
+		display: none;
+	}
 }
 .swiper-button-prev {
 	@include rotate(180deg, center);

@@ -35,12 +35,61 @@ include('parts/layout/l-headerInner.php');
                     data-maxw-breaks="980, 400"
                     data-maxw-cols="2, 1"
                     data-cols-init="3">
-                    <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
-                    <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
-                    <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
-                    <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
-                    <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
-                    <li><?php include('parts/components/c-cardServiceDetails.php');?></li>
+                    <li>
+                        <?php
+                        $cCardServiceDetails = array(
+                            'icon' => 'media/img/icons/contentPackage/003-advertising.png',
+                            'title' => 'Atrair Mais clientes',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
+                        include('parts/components/c-cardServiceDetails.php');
+                        ?>
+                    </li>
+
+                    <li>
+                        <?php
+                        $cCardServiceDetails = array(
+                            'icon' => 'media/img/icons/contentPackage/020-laptop.png',
+                            'title' => 'Atrair Mais clientes',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
+                        include('parts/components/c-cardServiceDetails.php');
+                        ?>
+                    </li>
+                    <li>
+                        <?php
+                        $cCardServiceDetails = array(
+                            'icon' => 'media/img/icons/contentPackage/019-language-1.png',
+                            'title' => 'Atrair Mais clientes',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
+                        include('parts/components/c-cardServiceDetails.php');
+                        ?>
+                    </li>
+                    <li>
+                        <?php
+                        $cCardServiceDetails = array(
+                            'icon' => 'media/img/icons/contentPackage/016-eye-contact.png',
+                            'title' => 'Atrair Mais clientes',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
+                        include('parts/components/c-cardServiceDetails.php');
+                        ?>
+                    </li>
+                    <li>
+                        <?php
+                        $cCardServiceDetails = array(
+                            'icon' => 'media/img/icons/contentPackage/010-connectivity.png',
+                            'title' => 'Atrair Mais clientes',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
+                        include('parts/components/c-cardServiceDetails.php');
+                        ?>
+                    </li>
+                    <li>
+                        <?php
+                        $cCardServiceDetails = array(
+                            'icon' => 'media/img/icons/contentPackage/014-call.png',
+                            'title' => 'Atrair Mais clientes',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
+                        include('parts/components/c-cardServiceDetails.php');
+                        ?>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -65,23 +114,104 @@ include('parts/layout/l-headerInner.php');
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <ul class="c-tabPlans__list">
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '860',
+                                                'cents' => '59',
+                                                'title' => 'Plano Silver',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '1069',
+                                                'cents' => '00',
+                                                'title' => 'Plano Gold',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '1359',
+                                                'cents' => '99',
+                                                'title' => 'Plano Diamond',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="swiper-slide">
                                     <ul class="c-tabPlans__list">
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '860',
+                                                'cents' => '59',
+                                                'title' => 'Plano Silver',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '1069',
+                                                'cents' => '00',
+                                                'title' => 'Plano Gold',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '1359',
+                                                'cents' => '99',
+                                                'title' => 'Plano Diamond',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="swiper-slide">
                                     <ul class="c-tabPlans__list">
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
-                                        <li><?php include('parts/components/c-cardPlan.php');?></li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '860',
+                                                'cents' => '59',
+                                                'title' => 'Plano Silver',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '1069',
+                                                'cents' => '00',
+                                                'title' => 'Plano Gold',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            $cCardPlan = array(
+                                                'price' => '1359',
+                                                'cents' => '99',
+                                                'title' => 'Plano Diamond',
+                                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing eltiam tempus felis a egestas posed eu libero.');
+                                            include('parts/components/c-cardPlan.php');
+                                            ?>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

@@ -30,7 +30,7 @@
             break;
         case 'contato' :
             $file = 'page_contact.php';
-            $title_page = 'Sobre - '.$title;
+            $title_page = 'Contato - '.$title;
             $classOnBody = 'p-inner';
             break;
         case 'blog' :
@@ -55,22 +55,22 @@
             break;
         case 'google-ads' :
             $file = 'page_service_googleAds.php';
-            $title_page = 'Serviços - '.$title;
+            $title_page = 'Google Ads - '.$title;
             $classOnBody = 'p-inner';
             break;
         case 'facebook-instagram-ads' :
             $file = 'page_service_fbInstaAds.php';
-            $title_page = 'Serviços - '.$title;
+            $title_page = 'Facebook & Instagram Ads - '.$title;
             $classOnBody = 'p-inner';
             break;
         case 'gestao-midias-sociais' :
             $file = 'page_service_socialMedia.php';
-            $title_page = 'Serviços - '.$title;
+            $title_page = 'Gestão de mídias sociais - '.$title;
             $classOnBody = 'p-inner';
             break;
         case 'marketing-digital' :
             $file = 'page_service_mktDigital.php';
-            $title_page = 'Serviços - '.$title;
+            $title_page = 'Marketing Digital - '.$title;
             $classOnBody = 'p-inner';
             break;
 

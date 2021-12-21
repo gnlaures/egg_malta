@@ -1,5 +1,6 @@
 .s-plans {
-    background: $primary;
+    @include bg(assets, 'bg_yellow.jpg', no-repeat, cover, fixed, center);
+    background-color: $primary;
     .s-defaultSection__head {
         margin-bottom: 40px;
         .u-container {

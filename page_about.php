@@ -17,7 +17,7 @@ include('parts/layout/l-headerInner.php');
                             <img src="media/img/assets/brand_symbol_yellow.png" alt="Malta Digital">
                         </span>
                         <span class="c-featuredPicture__icon --b">
-                            <img src="media/img/icons/icon_attach.svg" alt="Analytics">
+                            <img src="media/img/icons/icon_google.png" alt="Analytics">
                         </span>
                         <span class="c-featuredPicture__bgEffect"></span>
                         <figure class="c-featuredPicture__img">

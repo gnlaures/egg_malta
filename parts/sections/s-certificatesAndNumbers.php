@@ -9,11 +9,33 @@
             <div class="u-container">
                 <div class="c-swiperCertificates">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><?php include('parts/components/c-cardIcon.php');?></div>
-                        <div class="swiper-slide"><?php include('parts/components/c-cardIcon.php');?></div>
-                        <div class="swiper-slide"><?php include('parts/components/c-cardIcon.php');?></div>
-                        <div class="swiper-slide"><?php include('parts/components/c-cardIcon.php');?></div>
+                        <div class="swiper-slide">
+                            <?php $cCardIcon = array(
+                                'icon' => 'media/img/icons/icon_certificate_1.png',
+                                'title' => 'Certificação em anúncios do Shopping');
+                            include('parts/components/c-cardIcon.php');?>
+                        </div>
+                        <div class="swiper-slide">
+                            <?php $cCardIcon = array(
+                                'icon' => 'media/img/icons/icon_certificate_2.png',
+                                'title' => 'Certificação em anúncios do Shopping');
+                            include('parts/components/c-cardIcon.php');?>
+                        </div>
+                        <div class="swiper-slide">
+                            <?php $cCardIcon = array(
+                                'icon' => 'media/img/icons/icon_certificate_3.png',
+                                'title' => 'Certificação em anúncios do Shopping');
+                            include('parts/components/c-cardIcon.php');?>
+                        </div>
+                        <div class="swiper-slide">
+                            <?php $cCardIcon = array(
+                                'icon' => 'media/img/icons/icon_certificate_4.png',
+                                'title' => 'Certificação em anúncios do Shopping');
+                            include('parts/components/c-cardIcon.php');?>
+                        </div>
                     </div>
+                    <div class="swiper-button-prev"><img src="media/img/assets/caret_secondary_right.png"></div>
+                    <div class="swiper-button-next"><img src="media/img/assets/caret_secondary_right.png"></div>
                 </div>
             </div>
         </div>
@@ -27,10 +49,27 @@
             <div class="u-container">
                 <div class="c-swiperCompanyNumbers">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><?php include('parts/components/c-cardNumber.php');?></div>
-                        <div class="swiper-slide"><?php include('parts/components/c-cardNumber.php');?></div>
-                        <div class="swiper-slide"><?php include('parts/components/c-cardNumber.php');?></div>
+                        <div class="swiper-slide">
+                            <?php $cCardNumber = array(
+                                'number' => '+2.000',
+                                'caption' => 'Clientes atendidos em todo o mundo');
+                            include('parts/components/c-cardNumber.php');?>
+                        </div>
+                        <div class="swiper-slide">
+                            <?php $cCardNumber = array(
+                                'number' => '+150',
+                                'caption' => 'Lorem ipsum dolor sit onsectetur adipiscing elit');
+                            include('parts/components/c-cardNumber.php');?>
+                        </div>
+                        <div class="swiper-slide">
+                            <?php $cCardNumber = array(
+                                'number' => '15.598',
+                                'caption' => 'Lorem ipsum dolor sit amet adipisdo');
+                            include('parts/components/c-cardNumber.php');?>
+                        </div>
                     </div>
+                    <div class="swiper-button-prev"><img src="media/img/assets/caret_secondary_right.png"></div>
+                    <div class="swiper-button-next"><img src="media/img/assets/caret_secondary_right.png"></div>
                 </div>
             </div>
         </div>

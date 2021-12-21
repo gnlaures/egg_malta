@@ -61,6 +61,7 @@
         }
     }
     &__content {
+        padding-left: 15px;
         h4 {
             @include default__title($fs: 28px, $tc: $secondary);
             margin-bottom: 10px;
