@@ -3,6 +3,11 @@
     .swiper-slide {
         width: auto;
     }
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: inherit;
+        bottom: 25px;
+    }
 }
 
 .c-clientBrand {

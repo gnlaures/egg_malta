@@ -1,6 +1,6 @@
 <?php include("parts/layout/l-headerHome.php");?>
 
-<main class="l-page --home">
+<main class="l-page --home" id="malta">
     <?php include("parts/sections/s-services.php");?>
     <section class="s-defaultSection s-aboutUs">
         <div class="s-defaultSection__content">

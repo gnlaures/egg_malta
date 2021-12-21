@@ -83,3 +83,23 @@
 		background: $primary;
 	}
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+	@include roundedAll(100%);
+	background-color: $primary;
+	height: 27px;
+	background-image: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: -14px;
+	img	{
+		display: block;
+		width: 10px;
+	}
+}
+.swiper-button-prev {
+	@include rotate(180deg, center);
+}

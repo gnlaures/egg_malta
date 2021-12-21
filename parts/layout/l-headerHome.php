@@ -58,7 +58,7 @@
         </div>
         <div class="swiper-pagination"></div>
     </div>
-    <div class="c-linkScroll" data-link-destiny="main">
+    <a href="#malta" class="c-linkScroll js-scrollLink" data-link-destiny="main">
         <img src="media/img/assets/caret_secondary_down.png">
-    </div>
+    </a>
 </header>

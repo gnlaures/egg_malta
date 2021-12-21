@@ -1,6 +1,6 @@
 {
-    "name": "Laures",
-    "short_name": "Laures",
+    "name": "Malta Digital",
+    "short_name": "Malta Digital",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#0a1b1f",
-    "background_color": "#0a1b1f",
+    "theme_color": "#17191c",
+    "background_color": "#17191c",
     "display": "standalone"
 }

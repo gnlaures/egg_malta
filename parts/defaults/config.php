@@ -1,5 +1,5 @@
 <?php
-    $title = 'Laures Ronak | Boilerplate';
+    $title = 'Malta Digital';
     $pagina = explode('/', $_SERVER['REQUEST_URI']);
     $classOnBody = 'p-inner';
 

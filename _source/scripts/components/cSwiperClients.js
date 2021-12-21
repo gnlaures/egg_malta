@@ -4,8 +4,8 @@
         spaceBetween: 50,
         slidesPerView: 'auto',
         navigation: {
-            nextEl: '.cSwiperClients .swiper-button-next',
-            prevEl: '.cSwiperClients .swiper-button-prev',
+            nextEl: '.c-swiperClients .swiper-button-next',
+            prevEl: '.c-swiperClients .swiper-button-prev',
         },
         touchEvents: true,
         autoplay: {

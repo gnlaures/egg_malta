@@ -60,6 +60,8 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-prev"><img src="media/img/assets/caret_secondary_right.png"></div>
+                <div class="swiper-button-next"><img src="media/img/assets/caret_secondary_right.png"></div>
             </div>
         </div>
     </div>
