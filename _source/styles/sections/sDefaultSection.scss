@@ -36,3 +36,63 @@
         }
     }
 }
+@media screen and (max-width: 960px) {
+    .s-defaultSection {
+        padding: 60px 0;
+        &__head {
+            margin-bottom: 40px;
+            h2 {
+                @include default__title($fs: 52px, $tc: $secondary);
+                &.u-ta-r {
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                }
+            }
+
+            h3 {
+                @include default__title($fs: 38px, $tc: $secondary);
+                &.u-ta-r {
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                }
+            }
+            &.--withLink {
+                h2, h3 {
+                    margin-bottom: 30px;
+                }
+                .u-container {
+                    justify-content: center;
+                }
+                .c-linkReadMore {
+                    @include flexWidth(100%);
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 580px) {
+    .s-defaultSection {
+        &__head {
+            h2 {
+                @include default__title($fs: 42px, $tc: $secondary);
+            }
+            h3 {
+                @include default__title($fs: 32px, $tc: $secondary);
+            }
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    .s-defaultSection {
+        padding: 60px 0;
+        &__head,
+        &__content {
+            .u-container {
+                padding: 0 20px;
+            }
+        }
+    }
+}

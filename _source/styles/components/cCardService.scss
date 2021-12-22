@@ -103,3 +103,38 @@
         }
     }
 }
+
+@media screen and (max-width: 1320px) {
+    .c-cardService {
+        padding-left: 25px;
+        padding-right: 25px;
+        &__title {
+            h3 {
+                font-size: 28px;
+            }
+        }
+        &__text {
+            p {
+                font-size: 18px;
+            }
+        }
+        &__icon {
+            width: 60px;
+            height: 60px;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+body.so-mobile {
+    .c-cardService {
+        padding-bottom: 40px;
+        &__btn {
+            margin-top: 20px;
+            @include u-showElement;
+        }
+    }
+}

@@ -39,6 +39,17 @@
         <div class="l-navMobile__hero">
             <?php $cMainMenu = array('extraClass' => '--primary --vertical --click');
             include('parts/components/c-mainMenu.php'); ?>
+            <hr>
+            <?php
+            $cMainCTA = array(
+                'url_1' => '#',
+                'class_1' => '--primary --stroke',
+                'caption_1' => '(48)99999.9999',
+                'url_2' => 'servicos',
+                'class_2' => '--primary',
+                'caption_2' => 'Conheça os serviços');
+            include('parts/components/c-mainCTAs.php');
+            ?>
         </div>
     </div>
 </div>

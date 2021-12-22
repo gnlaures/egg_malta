@@ -40,3 +40,41 @@
         @include flexWidth(500px);
     }
 }
+
+@media screen and (max-width: 1180px) {
+    .s-requireContact__call {
+        padding-right: 60px;
+        h2 {
+            font-size: 52px;
+        }
+    }
+    .s-requireContact__form {
+        @include flexWidth(370px)
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .s-requireContact .u-container {
+        max-width: 620px;
+        flex-wrap: wrap;
+    }
+    .s-requireContact__call {
+        @include flexWidth(100%);
+        margin-bottom: 40px;
+        padding-right: 0;
+        &:after {
+            @include rotate(110deg, center);
+            width: 70px;
+            height: 40px;
+            top: inherit;
+            bottom: -60px;
+        }
+        h2, p {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+    .s-requireContact__form {
+        @include flexWidth(100%);
+    }
+}

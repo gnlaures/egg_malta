@@ -131,12 +131,32 @@ body.p-inner {
         margin-bottom: 30px;
     }
 
+    hr {
+        @include default__spacer();
+        width: 50%;
+        margin: 40px 0 50px 0;
+    }
+
     .c-smartMenu {
         > ul > li {
             margin-bottom: 20px;
             &:last-of-type {
                 margin-bottom: 0;
             }
+        }
+    }
+    .c-mainCTAs {
+        display: block;
+        li {
+            @include flexWidth(100%);
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        span {
+            display: none;
+        }
+        .c-btn {
+            @include flexWidth(100%);
         }
     }
 

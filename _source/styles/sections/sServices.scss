@@ -60,6 +60,8 @@
     .swiper-pagination {
         bottom: -45px;
     }
+
+    // deprecated
     &__list {
         @include roundedAll(30px);
         display: flex;
@@ -101,6 +103,29 @@
                 .c-cardService {
                     @include rounded(top, left, 30px);
                     @include rounded(bottom, left, 30px);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    .s-services {
+        .c-swiperServicesCards {
+            .swiper-slide {
+                min-width: 100%;
+                @include opacity(0);
+                pointer-events: all;
+                &:after {
+                    display: none;
+                }
+                &.swiper-slide-active {
+                    @include opacity(1);
+                }
+                &.swiper-slide-css-active {
+                    @include opacity(1);
+                    pointer-events: all;
                 }
             }
         }

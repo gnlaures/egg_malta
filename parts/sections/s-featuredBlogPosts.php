@@ -12,8 +12,8 @@
     </div>
     <div class="s-defaultSection__content">
         <div class="u-container">
-            <ul class="c-responsiveGrid --start"
-                data-maxw-breaks="980, 400"
+            <ul class="c-responsiveGrid --center"
+                data-maxw-breaks="1080, 640"
                 data-maxw-cols="2, 1"
                 data-cols-init="3">
                 <li><?php $cCardBlogResume = array(
