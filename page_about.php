@@ -7,7 +7,7 @@ $lHeaderInner = array(
 include('parts/layout/l-headerInner.php');
 ?>
 
-<main class="l-page --inner --about">
+<main class="l-page --inner --about" data-aos="fade-up">
     <section class="s-defaultSection s-aboutUs">
         <div class="s-defaultSection__content">
             <div class="u-container">

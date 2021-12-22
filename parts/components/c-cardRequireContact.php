@@ -1,24 +1,24 @@
 <div class="c-cardRequireContact">
     <h3>Gostou?<br>Solicite um contato!</h3>
     <hr>
-    <form action="#" class="c-form">
+    <form action="#" class="c-form" id="requireContact">
         <ul class="c-form__fieldsHero --pad5">
             <li class="c-form__field u-fw100">
-                <label for="formId_nome">Nome</label>
-                <input id="formId_nome" type="text" name="nome" class="field" required>
+                <label for="requireContact_nome">Nome</label>
+                <input id="requireContact_nome" type="text" name="nome" class="field" required>
             </li>
             <li class="c-form__field u-fw100">
-                <label for="formId_email">E-mail</label>
-                <input id="formId_email" type="email" name="email" class="field" required>
+                <label for="requireContact_email">E-mail</label>
+                <input id="requireContact_email" type="email" name="email" class="field" required>
             </li>
             <li class="c-form__field u-fw100">
-                <label for="formId_telefone">Telefone</label>
-                <input id="formId_telefone" type="tel" class="field foneMask" name="telefone" placeholder="(__) ____-_____" required>
+                <label for="requireContact_telefone">Telefone</label>
+                <input id="requireContact_telefone" type="tel" class="field" name="telefone" required>
             </li>
             <li class="c-form__field u-fw100 --select --full">
                 <div class="selectBox">
-                    <label for="formId_estado">Estado</label>
-                    <select name="estado" id="formId_estado" class="field">
+                    <label for="requireContact_estado">Estado</label>
+                    <select name="estado" id="requireContact_estado" class="field">
                         <option value="">Selecione</option>
                         <option value="ac">Acre</option>
                         <option value="al">Alagoas</option>
@@ -54,8 +54,8 @@
                 </div>
             </li>
             <li class="c-form__field u-fw100">
-                <label for="formId_cidade">Cidade</label>
-                <input id="formId_cidade" type="text" name="cidade" class="field">
+                <label for="requireContact_cidade">Cidade</label>
+                <input id="requireContact_cidade" type="text" name="cidade" class="field">
             </li>
             <li class="c-form__field u-fw100 --btn">
                 <button class="c-btn --primary">Enviar</button>

@@ -7,7 +7,7 @@ $lHeaderInner = array(
 include('parts/layout/l-headerInner.php');
 ?>
 
-<main class="l-page --inner --service">
+<main class="l-page --inner --service" data-aos="fade-up">
     <?php include('parts/layout/l-navSubInner.php');?>
     <section class="s-defaultSection s-service --intro" id="o-que-e">
         <div class="s-defaultSection__head">

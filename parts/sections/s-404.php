@@ -1,4 +1,4 @@
-<section class="s-defaultSection s-404">
+<section class="s-defaultSection s-404" data-aos="fade-up">
     <div class="s-defaultSection__content">
         <div class="u-container">
             <h4>:(</h4>

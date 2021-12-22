@@ -1,4 +1,4 @@
-<section class="s-defaultSection s-featuredBlogPosts">
+<section class="s-defaultSection s-featuredBlogPosts" data-aos="fade-up">
     <div class="s-defaultSection__head --withLink">
         <div class="u-container">
             <h2 class="u-ta-r">Lorem ipsum sit dollor consectur blog articles</h2>

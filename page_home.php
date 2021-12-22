@@ -2,7 +2,7 @@
 
 <main class="l-page --home" id="malta">
     <?php include("parts/sections/s-services.php");?>
-    <section class="s-defaultSection s-aboutUs">
+    <section class="s-defaultSection s-aboutUs" data-aos="fade-up">
         <div class="s-defaultSection__content">
             <div class="u-container">
                 <div class="s-aboutUs__picture">

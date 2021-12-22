@@ -1,10 +1,10 @@
 <section class="s-defaultSection s-services">
-    <div class="s-defaultSection__head">
+    <div class="s-defaultSection__head" data-aos="fade-up">
         <div class="u-container">
             <h2 class="u-ta-r">Lorem ipsum dolor sit amet, consectetur.</h2>
         </div>
     </div>
-    <div class="s-defaultSection__content">
+    <div class="s-defaultSection__content" data-aos="fade-up">
         <div class="u-container">
             <div class="c-swiperServicesCards">
                 <div class="swiper-wrapper">

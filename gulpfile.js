@@ -34,6 +34,7 @@ function gulpJS() {
     return gulp
         .src([
             '_source/scripts/partials/utilities.js',
+            '_source/scripts/partials/aos.js',
             '_source/scripts/partials/jsScrollLinks.js',
             '_source/scripts/components/cFavoriteToggle.js',
             '_source/scripts/components/cForm.js',
@@ -72,6 +73,7 @@ function pluginJS() {
             '_source/libraries/swiper/swiper.min.js',
             '_source/libraries/select2/dist/js/select2.js',
             '_source/libraries/select2/dist/js/i18n/pt-BR.js',
+            '_source/libraries/aos/aos.js',
         ])
         .pipe(concat('libraries-min.js'))
         .pipe(uglify())
@@ -84,6 +86,7 @@ function pluginCSS() {
             '_source/libraries/fancybox/jquery.fancybox.min.css',
             '_source/libraries/swiper/swiper.min.css',
             '_source/libraries/select2/dist/css/select2.min.css',
+            '_source/libraries/aos/aos.css',
         ])
         .pipe(concat('libraries-min.css'))
         .pipe(gulp.dest('dist/'));

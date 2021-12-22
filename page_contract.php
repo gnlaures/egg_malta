@@ -6,7 +6,7 @@ $lHeaderInner = array(
 include('parts/layout/l-headerInner.php');
 ?>
 
-<main class="l-page --inner --contract">
+<main class="l-page --inner --contract" data-aos="fade-up">
     <section class="s-defaultSection s-contract">
         <div class="s-defaultSection__content">
             <div class="u-container">

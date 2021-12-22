@@ -7,7 +7,7 @@ $lHeaderInner = array(
 include('parts/layout/l-headerInner.php');
 ?>
 
-<main class="l-page --services">
+<main class="l-page --services" data-aos="fade-up">
     <?php include("parts/sections/s-services.php");?>
     <?php include("parts/sections/s-needHelp.php");?>
 </main>
