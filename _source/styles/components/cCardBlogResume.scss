@@ -54,3 +54,13 @@
         }
     }
 }
+
+@media screen and (max-width: 430px) {
+    .c-cardBlogResume__content {
+        padding: 20px;
+        padding-bottom: 25px;
+    }
+    .c-cardBlogResume__content h3 {
+        font-size: 24px;
+    }
+}

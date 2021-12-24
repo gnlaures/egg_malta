@@ -29,7 +29,6 @@
     }
 }
 
-
 .c-tabPlans {
     display: flex;
     flex-direction: row;
@@ -92,6 +91,39 @@
         > li {
             @include flexWidth(33.3%);
             padding: 10px;
+        }
+    }
+}
+@media screen and (max-width: 840px) {
+    .c-tabPlans__list {
+        @include calcWidthForPositionNegative(-5px);
+        > li {
+            padding: 5px;
+        }
+    }
+}
+@media screen and (max-width: 760px) {
+    .c-tabPlans__list {
+        flex-wrap: wrap;
+        >li {
+            @include flexWidth(50%);
+            &:last-of-type {
+                @include flexWidth(100%);
+            }
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .c-tabPlans__list {
+        >li {
+            @include flexWidth(100%);
+            order: 2;
+            &:first-of-type {
+                order: 3;
+            }
+            &:last-of-type {
+                order: 1;
+            }
         }
     }
 }
@@ -174,6 +206,58 @@
         }
     }
 }
+@media screen and (max-width: 1080px) {
+    .c-cardPlan {
+        &__title {
+            h3 {
+                font-size: 30px;
+                max-width: 120px;
+            }
+        }
+        &__price {
+            .b, .z {
+                font-size: 26px;
+            }
+            .b {
+                top: 3px;
+            }
+            .z {
+                top: 22px;
+            }
+            .p {
+                font-size: 54px;
+            }
+            .m {
+                font-size: 14px;
+                bottom: -12px;
+            }
+        }
+        &__caption {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 840px) {
+    .c-cardPlan {
+        padding: 25px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .c-cardPlan__title {
+        h3 {
+            max-width: 100%;
+            text-align: center;
+        }
+        hr {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+
 
 .c-whatsappCall {
     display: block;
@@ -206,3 +290,4 @@
         }
     }
 }
+

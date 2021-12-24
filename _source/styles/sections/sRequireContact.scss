@@ -62,6 +62,7 @@
         @include flexWidth(100%);
         margin-bottom: 40px;
         padding-right: 0;
+        padding-top: 0;
         &:after {
             @include rotate(110deg, center);
             width: 70px;

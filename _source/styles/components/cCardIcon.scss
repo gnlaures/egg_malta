@@ -39,3 +39,20 @@ $cCardIcon__iconSize: 84px;
     }
 }
 
+@media screen and (max-width: 680px) {
+    .c-cardIcon {
+        &__icon {
+            width: 60px;
+            height: 60px;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        &__caption {
+            > p {
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -32,7 +32,7 @@ include('parts/layout/l-headerInner.php');
         <div class="s-defaultSection__content">
             <div class="u-container">
                 <ul class="c-responsiveGrid --center"
-                    data-maxw-breaks="980, 400"
+                    data-maxw-breaks="1140, 810"
                     data-maxw-cols="2, 1"
                     data-cols-init="3">
                     <li>

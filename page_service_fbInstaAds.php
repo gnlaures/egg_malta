@@ -31,16 +31,16 @@
         <div class="s-defaultSection__content">
             <div class="u-container">
                 <ul class="c-responsiveGrid --center"
-                    data-maxw-breaks="980, 400"
+                    data-maxw-breaks="1140, 810"
                     data-maxw-cols="2, 1"
                     data-cols-init="3">
                     <li>
                         <?php
-                            $cCardServiceDetails = array(
-                                'icon' => 'media/img/icons/contentPackage/003-advertising.png',
-                                'title' => 'Atrair Mais clientes',
-                                'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
-                            include('parts/components/c-cardServiceDetails.php');
+                        $cCardServiceDetails = array(
+                            'icon' => 'media/img/icons/contentPackage/003-advertising.png',
+                            'title' => 'Atrair Mais clientes',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum excepturi necessitatibus nesciunt nobis pariatur quisquam ratione, reiciendis sapiente tempore!');
+                        include('parts/components/c-cardServiceDetails.php');
                         ?>
                     </li>
 
@@ -146,7 +146,7 @@
                                     </ul>
                                 </div>
                                 <div class="swiper-slide">
-                                   <ul class="c-tabPlans__list">
+                                    <ul class="c-tabPlans__list">
                                         <li>
                                             <?php
                                             $cCardPlan = array(
@@ -180,7 +180,7 @@
                                     </ul>
                                 </div>
                                 <div class="swiper-slide">
-                                   <ul class="c-tabPlans__list">
+                                    <ul class="c-tabPlans__list">
                                         <li>
                                             <?php
                                             $cCardPlan = array(

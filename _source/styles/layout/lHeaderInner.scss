@@ -54,3 +54,23 @@
         }
     }
 }
+
+@media screen and (max-width: 780px) {
+    .l-headerInner h1 {
+        font-size: 52px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .l-headerInner h1 {
+        font-size: 46px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .l-headerInner__content {
+        padding-top: 96px;
+    }
+    .l-headerInner.--blogArticle .l-headerInner__content {
+        padding-top: 160px;
+    }
+}

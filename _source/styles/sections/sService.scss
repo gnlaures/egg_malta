@@ -35,7 +35,8 @@
         .c-responsiveGrid {
             @include calcWidthForPositionNegative(-5px);
             li {
-                padding: 5px;
+                padding-left: 5px;
+                padding-right: 5px;
             }
         }
         .c-toggleList {
@@ -43,6 +44,7 @@
         }
     }
 }
+
 
 .c-cardServiceDetails {
     @include roundedAll();

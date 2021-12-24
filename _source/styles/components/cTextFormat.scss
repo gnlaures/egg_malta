@@ -80,7 +80,7 @@
                 margin-bottom: 0;
             }
             > p {
-                display: inline-block;
+                display: inline;
             }
             > a {
                 @include opacity(0.4);
@@ -127,6 +127,47 @@
         margin-top: 40px;
         .authorAndDate {
             @include paragrafos();
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .c-textFormat {
+        h1, h1 span, h1 strong,
+        h2, h2 span, h2 strong,
+        h3, h3 span, h3 strong,
+        h4, h4 span, h4 strong,
+        h5, h5 span, h5 strong,
+        h6, h6 span, h6 strong {
+            display: block;
+            width: 100%;
+            color: $secondary;
+            font-family: $fontFamily__osc;
+            font-weight: $fwBold;
+            margin: 10px 0;
+            line-height: 1;
+            * {
+                display: inline !important;
+            }
+        }
+        h1, h1 span, h1 strong, {
+            font-size: 52px;
+            line-height: 0.8;
+        }
+        h2, h2 span, h2 strong, {
+            font-size: 44px;
+        }
+        h3, h3 span, h3 strong, {
+            font-size: 38px;
+        }
+        h4, h4 span, h4 strong, {
+            font-size: 30px;
+        }
+        h5, h5 span, h5 strong, {
+            font-size: 24px;
+        }
+        h6, h6 span, h6 strong  {
+            font-size: 20px;
         }
     }
 }

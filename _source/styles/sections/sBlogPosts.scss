@@ -12,7 +12,6 @@
     }
 }
 
-
 .c-pagination {
     display: flex;
     flex-direction: row;
@@ -58,5 +57,34 @@
             color: $black;
             font-weight: $fwBold;
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .s-defaultAsideSection__aside {
+        @include flexWidth(280px);
+    }
+    .s-defaultAsideSection__content {
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .s-defaultAsideSection .u-container {
+        flex-wrap: wrap;
+    }
+    .s-defaultAsideSection__aside {
+        @include flexWidth(100%);
+        margin-top: 80px;
+    }
+    .s-defaultAsideSection__content {
+        @include flexWidth(100%);
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .s-defaultAsideSection .u-container {
+        padding: 0 20px;
     }
 }

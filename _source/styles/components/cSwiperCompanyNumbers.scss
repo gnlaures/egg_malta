@@ -4,3 +4,9 @@
         max-width: 340px;
     }
 }
+
+@media screen and (max-width: 780px) {
+    .c-swiperCompanyNumbers .swiper-slide {
+        max-width: 100%;
+    }
+}

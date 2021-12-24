@@ -22,3 +22,26 @@
         }
     }
 }
+
+@media screen and (max-width: 1080px) {
+    .s-contact {
+        &__form {
+            .c-form__fieldsHero.--pad10>.c-form__field {
+                @include flexWidth(100%);
+            }
+        }
+    }
+}
+@media screen and (max-width: 880px) {
+    .s-contact .u-container {
+        flex-wrap: wrap;
+    }
+    .s-contact__form {
+        @include flexWidth(100%);
+        padding-right: 0;
+        margin-bottom: 60px;
+    }
+    .s-contact__infos {
+        @include flexWidth(100%);
+    }
+}

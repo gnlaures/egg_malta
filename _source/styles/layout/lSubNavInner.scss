@@ -17,13 +17,55 @@
         a {
             @include roundedAll(50px);
             @include transition();
+            display: block;
             font-family: $fontFamily__osc;
             font-size: 20px;
             color: $black;
             font-weight: $fwBold;
             padding: 10px 20px;
+            text-align: center;
             &:hover {
                 background: $primaryDark;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .l-page.--service .l-subNavInner {
+        padding: 12px 20px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .l-subNavInner {
+        padding: 0 !important;
+        ul {
+            overflow: auto;
+            justify-content: flex-start;
+            padding: 12px 20px;
+            a {
+                white-space: nowrap;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .l-subNavInner {
+        ul {
+            padding-left: 15px;
+            padding-right: 15px;
+            li {
+                margin-right: 15px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            a {
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
     }

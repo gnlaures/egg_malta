@@ -20,6 +20,11 @@
         }
     }
 }
+@media screen and (max-width: 780px) {
+    .s-aboutUs.--reverse {
+        padding-top: 0;
+    }
+}
 
 .l-page.--services {
     .s-services {
@@ -34,5 +39,20 @@
         position: sticky;
         top: 108px;
         z-index: 4;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .l-page.--service {
+        .l-subNavInner {
+            top: 94px;
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    .l-page.--service {
+        .l-subNavInner {
+            top: 86px;
+        }
     }
 }

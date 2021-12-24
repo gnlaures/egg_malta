@@ -71,6 +71,20 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        &.--reverse {
+            .s-aboutUs__content {
+                margin-top: 0;
+                margin-bottom: 40px;
+                padding-right: 0;
+                h2, p {
+                    text-align: center;
+                }
+            }
+            .s-aboutUs__picture {
+                padding-left: 0;
+            }
+        }
     }
 }
 @media screen and (max-width: 580px) {
@@ -82,7 +96,6 @@
         }
     }
 }
-
 @media screen and (max-width: 480px) {
     .s-aboutUs {
         .c-mainCTAs {

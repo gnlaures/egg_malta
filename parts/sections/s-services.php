@@ -16,34 +16,6 @@
                             'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
                         include('parts/components/c-cardService.php'); ?></div>
                     <div class="swiper-slide"><?php $cCardService = array(
-                            'url' => 'gestao-midias-sociais',
-                            'icon' => 'media/img/icons/contentPackage/007-calendar.png',
-                            'title' => 'Gestão de mídias sociais',
-                            'btnCaption' => 'Saiba mais',
-                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
-                        include('parts/components/c-cardService.php'); ?></div>
-                    <div class="swiper-slide"><?php $cCardService = array(
-                            'url' => 'gestao-midias-sociais',
-                            'icon' => 'media/img/icons/contentPackage/007-calendar.png',
-                            'title' => 'Gestão de mídias sociais',
-                            'btnCaption' => 'Saiba mais',
-                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
-                        include('parts/components/c-cardService.php'); ?></div>
-                    <div class="swiper-slide"><?php $cCardService = array(
-                            'url' => 'gestao-midias-sociais',
-                            'icon' => 'media/img/icons/contentPackage/007-calendar.png',
-                            'title' => 'Gestão de mídias sociais',
-                            'btnCaption' => 'Saiba mais',
-                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
-                        include('parts/components/c-cardService.php'); ?></div>
-                    <div class="swiper-slide"><?php $cCardService = array(
-                            'url' => 'gestao-midias-sociais',
-                            'icon' => 'media/img/icons/contentPackage/007-calendar.png',
-                            'title' => 'Gestão de mídias sociais',
-                            'btnCaption' => 'Saiba mais',
-                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
-                        include('parts/components/c-cardService.php'); ?></div>
-                    <div class="swiper-slide"><?php $cCardService = array(
                             'url' => 'facebook-instagram-ads',
                             'icon' => 'media/img/icons/contentPackage/013-chat-bubble.png',
                             'title' => 'Facebook Ads & Instagram Ads',

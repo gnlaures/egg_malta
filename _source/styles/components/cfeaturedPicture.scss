@@ -61,3 +61,14 @@
         }
     }
 }
+
+@media screen and (max-width: 510px) {
+    .c-featuredPicture__icon {
+        width: 80px;
+        height: 80px;
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
