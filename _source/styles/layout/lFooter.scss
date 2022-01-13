@@ -46,9 +46,38 @@
             justify-content: space-between;
             flex-direction: row;
         }
-        .by,
-        .reserved {
+        .by {
+            flex: 0 1 auto;
+            white-space: nowrap;
             @include paragrafos($fs: 14px, $tc: $gray4);
+        }
+        .reserved {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            > span, a {
+                @include paragrafos($fs: 14px, $tc: $gray4)
+            }
+            ul {
+                margin-left: 10px;
+                padding-left: 10px;
+                border-left: 1px solid $gray6;
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 
@@ -101,6 +130,12 @@
             }
             .reserved {
                 margin-bottom: 15px;
+                ul {
+                    margin-top: 15px;
+                    border-left: 0;
+                    margin-left: 0;
+                    padding-left: 0;
+                }
             }
         }
 
