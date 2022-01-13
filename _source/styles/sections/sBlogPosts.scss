@@ -1,4 +1,18 @@
 .s-blogPosts {
+    &__searchFeedback {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        h2 {
+            @include default__title($fs: 24px);
+            font-weight: $fwMedium;
+            strong {
+                @include default__title($fs: 24px);
+                display: inline;
+                font-weight: $fwBold;
+            }
+        }
+    }
     &__articles {
         > li {
             margin-bottom: 60px;

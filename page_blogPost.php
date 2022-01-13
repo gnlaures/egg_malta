@@ -11,6 +11,9 @@ include('parts/layout/l-headerInner.php');
     <section class="s-defaultAsideSection s-blogPosts">
         <div class="u-container">
             <div class="s-defaultAsideSection__content">
+<!--                <div class="s-blogPost__searchFeedback">-->
+<!--                    <h3>Resultado da busca por: <strong>--><?php //echo $s ?><!-- </strong></h3>-->
+<!--                </div>-->
                 <article class="c-textFormat">
                     <figure>
                         <div>
