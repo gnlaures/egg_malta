@@ -28,6 +28,11 @@
             $title_page = 'Sobre - '.$title;
             $classOnBody = 'p-inner';
             break;
+        case 'blank' :
+            $file = 'page_blank.php';
+            $title_page = 'Blank - '.$title;
+            $classOnBody = 'p-inner';
+            break;
         case 'contato' :
             $file = 'page_contact.php';
             $title_page = 'Contato - '.$title;

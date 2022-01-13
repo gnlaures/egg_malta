@@ -72,7 +72,7 @@
         width: 100%;
         margin: 10px 0;
         li {
-            color: $primary;
+            @include paragrafos();
             margin-bottom: 10px;
             display: list-item;
             list-style-position: inside;
@@ -127,6 +127,16 @@
         margin-top: 40px;
         .authorAndDate {
             @include paragrafos();
+        }
+    }
+
+    .wp-block-gallery {
+        ul, ol {
+            display: flex !important;
+            a {
+                @extend .u-aspectRatio;
+                @extend .--ratio-1-1;
+            }
         }
     }
 }

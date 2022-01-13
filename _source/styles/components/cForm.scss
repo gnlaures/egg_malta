@@ -614,4 +614,20 @@ $field_checks_size: 20px;
             margin-top: 0;
         }
     }
+
+    form {
+        .wpforms-error {
+            @include roundedAll(10px);
+            background: $gray1 !important;
+            font-size: 12px !important;
+            padding: 5px 10px !important;
+            float: right !important;
+            position: relative !important;
+            top: -5px !important;
+            font-weight: $fwBold !important;
+            background: $primary !important;
+            color: $secondary !important;
+            font-family: $fontFamily__default;
+        }
+    }
 }

@@ -53,3 +53,13 @@
         }
     }
 }
+
+.wpforms-confirmation-container-full {
+    @include roundedAll();
+    background: $gray1;
+    border: 1px solid $gray2;
+    p {
+        @include paragrafos();
+        text-align: center;
+    }
+}
