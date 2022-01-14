@@ -9,7 +9,7 @@
             @include transition();
             @include opacity(0);
             flex: 1 1 auto;
-            min-width: 25%;
+            min-width: 20%;
             position: relative;
             pointer-events: none;
             &:after {
@@ -70,7 +70,7 @@
         li {
             flex: 1 1 auto;
             max-width: 33.3%;
-            min-width: 25%;
+            min-width: 20%;
             position: relative;
             &:after {
                 @include transition();

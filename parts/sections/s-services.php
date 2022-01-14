@@ -1,7 +1,7 @@
 <section class="s-defaultSection s-services">
     <div class="s-defaultSection__head" data-aos="fade-up">
         <div class="u-container">
-            <h2 class="u-ta-r">Lorem ipsum dolor sit amet, consectetur.</h2>
+            <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
         </div>
     </div>
     <div class="s-defaultSection__content" data-aos="fade-up">
@@ -33,6 +33,13 @@
                             'url' => 'marketing-digital',
                             'icon' => 'media/img/icons/contentPackage/026-meeting.png',
                             'title' => 'Marketing<br>Digital',
+                            'btnCaption' => 'Saiba mais',
+                            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
+                        include('parts/components/c-cardService.php'); ?></div>
+                    <div class="swiper-slide"><?php $cCardService = array(
+                            'url' => 'marketing-digital',
+                            'icon' => 'media/img/icons/contentPackage/020-laptop.png',
+                            'title' => 'Desenvolvimento<br>de sites',
                             'btnCaption' => 'Saiba mais',
                             'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
                         include('parts/components/c-cardService.php'); ?></div>

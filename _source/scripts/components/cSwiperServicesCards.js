@@ -23,7 +23,17 @@
         $('.c-swiperServicesCards .swiper-slide')
             .removeClass('swiper-slide-css-active')
             .removeClass('css-last-active');
-        if (wwid >= 1170) {
+        if (wwid >= 1240) {
+            console.log('>= 1240')
+            $('.c-swiperServicesCards .swiper-slide').css('min-width', '20%');
+            cSwiperServicesCards.init('.c-swiperServicesCards');
+            $('.c-swiperServicesCards .swiper-slide-active')
+                .addClass('swiper-slide-css-active')
+                .next().addClass('swiper-slide-css-active')
+                .next().addClass('swiper-slide-css-active')
+                .next().addClass('swiper-slide-css-active')
+                .next().addClass('swiper-slide-css-active').addClass('css-last-active');
+        } else if (wwid >= 1170) {
             console.log('>= 1170')
             $('.c-swiperServicesCards .swiper-slide').css('min-width', '25%');
             cSwiperServicesCards.init('.c-swiperServicesCards');
