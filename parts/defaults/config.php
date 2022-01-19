@@ -63,6 +63,11 @@
             $title_page = 'Google Ads - '.$title;
             $classOnBody = 'p-inner';
             break;
+        case 'sites' :
+            $file = 'page_service_sites.php';
+            $title_page = 'Criação de Sites - '.$title;
+            $classOnBody = 'p-inner';
+            break;
         case 'facebook-instagram-ads' :
             $file = 'page_service_fbInstaAds.php';
             $title_page = 'Facebook & Instagram Ads - '.$title;

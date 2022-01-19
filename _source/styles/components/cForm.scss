@@ -212,6 +212,18 @@ $field_checks_size: 20px;
                         margin-top: 5px;
                     }
                 }
+                &.u-dflex {
+                    align-items: flex-start;
+                    li {
+                        margin-right: 30px;
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        &:last-of-type {
+                            margin-top: 0;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
             }
             .fakeLabel {
                 margin-bottom: 8px;
@@ -242,22 +254,11 @@ $field_checks_size: 20px;
                 label {
                     font-family: $fontFamily__default;
                 }
-                .checkHero {
-                    &.u-dflex {
-                        align-items: flex-start;
-                        li {
-                            margin-right: 30px;
-                            margin-top: 0;
-                            margin-bottom: 10px;
-                            &:last-of-type {
-                                margin-top: 0;
-                                margin-bottom: 10px;
-                            }
-                        }
-                    }
-                }
             }
             &.--radio {
+                label {
+                    font-family: $fontFamily__default;
+                }
                 input {
                     @include roundedAll(50%);
                 }
@@ -628,6 +629,19 @@ $field_checks_size: 20px;
             background: $primary !important;
             color: $secondary !important;
             font-family: $fontFamily__default;
+        }
+        input[type=radio],
+        input[type=checkbox] {
+            &:checked {
+                background: url(#{$media_icons}/icon_checked.svg) !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                background-position: center !important;
+            }
+        }
+        .wpforms-error {
+            background: $field_bg !important;
+            border: 1px solid $feedbackError !important;
         }
     }
 }

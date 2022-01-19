@@ -27,6 +27,21 @@
         align-items: center;
         justify-content: center;
     }
+
+    .c-cardRequireContact {
+        display: block;
+        margin: 0 auto;
+        max-width: 880px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .s-plans {
+        .c-cardRequireContact {
+            .c-form__fieldsHero.--pad10>.c-form__field {
+                @include flexWidth(100%);
+            }
+        }
+    }
 }
 
 .c-tabPlans {
@@ -256,8 +271,6 @@
         }
     }
 }
-
-
 
 .c-whatsappCall {
     display: block;

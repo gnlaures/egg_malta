@@ -61,5 +61,4 @@ include('parts/layout/l-headerInner.php');
         </div>
     </section>
 </main>
-<?php include("parts/sections/s-clients.php");?>
 

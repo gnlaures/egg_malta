@@ -12,8 +12,10 @@
         $(idSelect2).select2('open');
     });
      $('.c-form__field *').on('click', function(e) {
-         $('.c-form__field').removeClass('is-active');
-         $(this).closest('li').addClass('is-active');
+         if ($(this).hasClass('--select')) {
+             $('.c-form__field').removeClass('is-active');
+             $(this).closest('li').addClass('is-active');
+         }
      });
 
     // select

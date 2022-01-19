@@ -70,7 +70,11 @@
         swipersServiceCards__updateClasses()
     });
     $(window).on('resize', function() {
-        swipersServiceCards__updateClasses();
+        if ($('.c-swiperServicesCards').length) {
+            swipersServiceCards__updateClasses();
+        }
     });
-    swipersServiceCards__updateClasses();
+    if ($('.c-swiperServicesCards').length) {
+        swipersServiceCards__updateClasses();
+    }
 }
