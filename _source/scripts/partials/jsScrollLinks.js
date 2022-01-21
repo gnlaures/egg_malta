@@ -1,4 +1,4 @@
-console.log('teste')
+//console.log('teste')
 $('.js-scrollLink').on('click', function(e) {
     e.preventDefault();
     let finalDestiny = $(this).attr('href');

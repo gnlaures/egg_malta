@@ -1,6 +1,6 @@
 {
     const qtfSliders = $('.js-swiperHeaderHome .swiper-slide').length;
-    console.log('qtfSliders ' + qtfSliders)
+    //console.log('qtfSliders ' + qtfSliders)
 
     let options = {
         speed: 400,
@@ -14,7 +14,7 @@
     }
 
     if (qtfSliders <= 1) {
-        console.log('entrou aqui')
+        //console.log('entrou aqui')
         options = {
             speed: 400,
             spaceBetween: 0,
@@ -22,7 +22,7 @@
             allowTouchMove: false
         }
     } else {
-        console.log('aqui entao')
+        //console.log('aqui entao')
     }
 
     const swiper__headerHome = new Swiper('.js-swiperHeaderHome', options);
