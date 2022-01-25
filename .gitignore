@@ -2,3 +2,5 @@
 _boilerplate
 node_modules
 wp-content
+
+package-lock.json
