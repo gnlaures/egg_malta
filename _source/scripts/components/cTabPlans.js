@@ -13,20 +13,8 @@
         $(this).addClass('is-active');
 
         // changeswipers
-        let thisHref = $(this).attr('href');
-        console.log(thisHref)
-        switch (thisHref) {
-            case '#6meses':
-                tabPlans__swiper.slideTo(0);
-                break;
-            case '#9meses':
-                tabPlans__swiper.slideTo(1);
-                break;
-            case '#mensal':
-                tabPlans__swiper.slideTo(2);
-                break;
-            default:
-                tabPlans__swiper.slideTo(0);
-        }
+        let index = $(this).closest('li').index();
+        tabPlans__swiper.slideTo(index);
+   
     })
 }
