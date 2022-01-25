@@ -2,6 +2,7 @@
     $lHeaderInner = array(
         'extraClass' => '',
         'h1' => 'Criação de sites',
+        'bg' => '',
         'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elras eu diam eget felis mattis posuere sit amet a mectr.');
     include('parts/layout/l-headerInner.php');
 ?>
