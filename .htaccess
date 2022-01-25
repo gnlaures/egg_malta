@@ -1,28 +1,15 @@
-#Comprimir site para ocupar menor banda
-#AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
-#BrowserMatch ^Mozilla/4 gzip-only-text/html
-#BrowserMatch ^Mozilla/4.0[678] no-gzip
-#BrowserMatch bMSIE !no-gzip !gzip-only-text/html
-
-#<FilesMatch \.php$>
-#    # Apache 2.4.10+ can proxy to unix socket
-#    SetHandler "proxy:unix:/var/run/php/php5.6-fpm.sock|fcgi://localhost/"
-#</FilesMatch>
-
-#php_flag display_startup_errors on
-#php_flag display_errors on
-#php_flag html_errors on
-
-#Idioma padrao
-DefaultLanguage pt-BR
-
+# BEGIN WordPress
+# As diretrizes (linhas) entre "BEGIN WordPress" e "END WordPress" são
+# geradas dinamicamente e só devem ser modificadas através de filtros do WordPress.
+# Quaisquer alterações nas diretivas entre esses marcadores serão sobrescritas.
+<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
 
-#Redireciona sempre para config
-# RewriteRule ^(.*?)$ config.php
-# RewriteRule ^$ config.php
-
-#Remove listagem de diretorios
-Options -Indexes
+# END WordPress
