@@ -9,6 +9,48 @@ $field_bg_focus: $gray1;
 $spacer_bg: $gray1;
 $field_checks_size: 20px;
 .c-form {
+
+    .wpforms-field-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+
+        .wpforms-field {
+            grid-column-end: span 2;
+
+            &.w50 {
+                grid-column-start: auto;
+                grid-column-end: auto;
+            }
+        }
+
+        textarea.wpforms-field-large{
+            height: 130px !important;
+        }
+    }
+
+    @media screen and (max-width: 780px) {
+
+        .wpforms-field-container{
+            grid-template-columns: 1fr;
+
+            .wpforms-field {
+                grid-column-end: inherit;
+
+                &.w50 {
+                    grid-column-start: inherit;
+                    grid-column-end: inherit;
+                }
+            }
+        }
+
+        .c-form__fieldsHero.--pad10>.c-form__field {
+            @include flexWidth(100%);
+        }
+        
+    }
+
+
     &__fieldsHero {
         display: flex;
         flex-direction: row;
